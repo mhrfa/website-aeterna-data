@@ -1,0 +1,8 @@
+c:\Users\asus\Desktop\website-aeterna-data-nextjs16-keuda\aeterna-data\components\sections\CTABanner.tsx:10: <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 w-[800px] h-[800px] bg-[radial-gradient(circle,rgba(74,124,255,0.08)_0%,transparent_60%)] pointer-events-none -z-10" />
+c:\Users\asus\Desktop\website-aeterna-data-nextjs16-keuda\aeterna-data\components\sections\Hero.tsx:76: { value: "Flat Rate", label: "Credited Pilot" },
+c:\Users\asus\Desktop\website-aeterna-data-nextjs16-keuda\aeterna-data\app\how-it-works\page.tsx:364: rate: "€2,800 – €5,500 / mo",
+c:\Users\asus\Desktop\website-aeterna-data-nextjs16-keuda\aeterna-data\app\pricing\page.tsx:361: {/* ── SECTION 4: The Pilot Credit ── */}
+c:\Users\asus\Desktop\website-aeterna-data-nextjs16-keuda\aeterna-data\app\services\computer-vision\page.tsx:99: <span className="text-[var(--color-text-muted)] text-xs uppercase tracking-widest mt-1">Credited Pilot</span>
+c:\Users\asus\Desktop\website-aeterna-data-nextjs16-keuda\aeterna-data\app\services\nlp\page.tsx:101: <span className="text-[var(--color-text-muted)] text-xs uppercase tracking-widest mt-1">Credited Pilot</span>
+c:\Users\asus\Desktop\website-aeterna-data-nextjs16-keuda\aeterna-data\app\services\data-validation\page.tsx:101: <span className="text-[var(--color-text-muted)] text-xs uppercase tracking-widest mt-1">Credited Pilot</span>
+c:\Users\asus\Desktop\website-aeterna-data-nextjs16-keuda\aeterna-data\app\services\rlhf\page.tsx:101: <span className="text-[var(--color-text-muted)] text-xs uppercase tracking-widest mt-1">Credited Pilot</span>

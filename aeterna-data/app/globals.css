@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg-base: #050505;
+  --color-bg-surface: #0E0E10;
+  --color-bg-elevated: #161618;
+  --color-border: #1E1E22;
+  --color-border-subtle: #2A2A30;
+  --color-border-hover: #3A3A42;
+  --color-text-primary: #F5F3EF;
+  --color-text-secondary: #9A9A9A;
+  --color-text-muted: #505055;
+  --color-accent-cta: #4A7CFF;
+  --color-accent-cta-hover: #6B94FF;
+  --color-orb-purple: rgba(88, 28, 255, 0.18);
+  --color-orb-blue: rgba(14, 165, 233, 0.10);
+  --color-orb-teal: rgba(20, 184, 166, 0.05);
+
+  --font-sans: "Geist", "Inter", "system-ui", "sans-serif";
+  --font-mono: "Geist Mono", "JetBrains Mono", "monospace";
+}
+
+:root {
+  --color-bg-base: #050505;
+  --color-bg-surface: #0E0E10;
+  --color-bg-elevated: #161618;
+  --color-border: #1E1E22;
+  --color-border-subtle: #2A2A30;
+  --color-border-hover: #3A3A42;
+  --color-text-primary: #F5F3EF;
+  --color-text-secondary: #9A9A9A;
+  --color-text-muted: #505055;
+  --color-accent-cta: #4A7CFF;
+  --color-accent-cta-hover: #6B94FF;
+  --color-orb-purple: rgba(88, 28, 255, 0.18);
+  --color-orb-blue: rgba(14, 165, 233, 0.10);
+  --color-orb-teal: rgba(20, 184, 166, 0.05);
+}
+
+@layer base {
+  body {
+    background-color: var(--color-bg-base);
+    color: var(--color-text-primary);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  [id] {
+    scroll-margin-top: 5rem;
+  }
+}
