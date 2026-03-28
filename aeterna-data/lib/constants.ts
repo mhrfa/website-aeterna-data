@@ -1,9 +1,9 @@
-import { Shield, BarChart, Lock, Scan, Languages, BrainCircuit, ShieldCheck, CheckCircle2, Clock, TrendingUp, Building2, FlaskConical } from "lucide-react";
+import { BoxSelect, Layers, Tag, GitCompare, ShieldCheck, FileText, Shield, CheckCircle, FlaskConical, Clock, TrendingUp, Building2 } from "lucide-react";
 
 export const SITE_META = {
-    title: "Aeterna Data — Enterprise AI Data Annotation for EU Teams",
+    title: "Aeterna Data — Precise Image Annotation for AI Teams",
     description:
-        "GDPR-compliant, BYOT AI data annotation and model alignment services for DACH and Benelux AI teams. Contract-first. IAA-measured (Cohen's κ ≥ 0.80 / Fleiss' κ ≥ 0.75). No platform lock-in.",
+        "Specialized image annotation and visual RLHF evaluation for AI startups and research labs. IAA-measured (Cohen's κ ≥ 0.80 / Fleiss' κ ≥ 0.75). Structured workflows. Consistent quality.",
     companyName: "PT Aeterna Data Intentio Logic",
     brandName: "Aeterna.Data",
     email: "hello@aeternadata.com",
@@ -16,85 +16,84 @@ export const NAV_LINKS = [
 ];
 
 export const HERO = {
-    pillText: "Bring Your Own Tool (BYOT) Model",
-    headline: "Enterprise-Grade AI Training Data.",
-    headlineItalic: "Built in Your Environment.",
+    headline: "We provide precise image annotation services to support your machine learning teams.",
     subHeadline:
-        "A fully managed, scalable annotation workforce that integrates directly into your proprietary labeling dashboard. Zero software lock-in. Contractually guaranteed QA.",
-    ctaPrimary: "Book a Discovery Call",
-    ctaSecondary: "Explore QA Standards",
-    trustIndicators: [
-        { text: "GDPR Article 28 Compliant", icon: Shield },
-        { text: "Cohen's κ ≥ 0.80 / Fleiss' κ ≥ 0.75 — Every Batch", icon: BarChart },
-        { text: "NDA-Bound Remote Workforce", icon: Lock },
-    ],
+        "Our team specializes in annotating computer vision datasets and evaluating visual AI. With clear workflows, we deliver consistent quality. We work with AI startups and research labs that need dependable human annotation instead of anonymous crowd work.",
+    ctaPrimary: "Request a Pilot",
+    ctaSecondary: "See Our Services",
 };
 
 export const SERVICES = {
-    label: "Core Competencies",
-    title: "Four Verticals. One Managed Workforce.",
+    label: "Services",
+    title: "Five Services. One Quality Standard.",
     description:
-        "We operate as an embedded team inside your stack. No platform to adopt. No onboarding overhead.",
+        "Aeterna Data specializes in computer vision annotation and visual AI evaluation. Each service follows a clear workflow: pilot phase, guideline validation, production annotation, and internal QA review before delivery.",
     cards: [
         {
-            icon: Scan,
-            title: "Computer Vision & Spatial Annotation",
+            icon: BoxSelect,
+            title: "Bounding Box Annotation",
             description:
-                "High-throughput 2D labeling for autonomous and visual AI systems. Strictly managed QA pipelines ensure production-grade consistency at scale.",
-            tags: ["Bounding Boxes", "Polygon Labeling", "Semantic Segmentation", "Object Tracking"],
+                "We provide object detection dataset labeling using class-specific consistency guidelines, structured to support production-grade computer vision training pipelines.",
+            tags: ["Object Detection", "YOLO", "COCO Format"],
         },
         {
-            icon: Languages,
-            title: "Advanced NLP & Multilingual Linguistic Analysis",
+            icon: Layers,
+            title: "Image Segmentation",
             description:
-                "Academic-grade text annotation for complex LLM training pipelines. We go beyond basic tagging — structural language comprehension, cultural accuracy, and rigorous translation QA.",
-            tags: ["Named Entity Recognition", "Intent Labeling", "Translation QA", "Deep Semantic Tagging"],
+                "We provide pixel-level object identification and masking for both semantic and instance segmentation tasks, along with polygon annotation and per-class quality checks.",
+            tags: ["Semantic", "Instance", "Polygon"],
         },
         {
-            icon: BrainCircuit,
-            title: "RLHF & Model Alignment",
+            icon: Tag,
+            title: "Image Classification",
             description:
-                "Expert human-in-the-loop feedback to calibrate LLM behaviour. Our annotators apply advanced evaluation frameworks — including Appraisal Theory — to produce nuanced, rubric-consistent preference data.",
-            tags: ["Pairwise Preference Ranking", "Instruction-Following Assessment", "Safety Classification", "Multi-Dimensional Rating"],
+                "We provide structured visual dataset categorisation with multi-label support. Consistent taxonomy application is ensured through internal cross-checking.",
+            tags: ["Multi-Label", "Taxonomy", "Structured"],
+        },
+        {
+            icon: GitCompare,
+            title: "Visual RLHF Evaluation",
+            description:
+                "We rank and evaluate AI-generated image outputs to support reward model training. This process uses pairwise preference annotation, structured rubrics, and consistency monitoring.",
+            tags: ["Text-to-Image", "Pairwise", "Rubric"],
         },
         {
             icon: ShieldCheck,
-            title: "Data Validation, QA & Custom Work",
+            title: "Dataset Validation & QA",
             description:
-                "Audit, clean, and validate existing datasets — or scope an entirely bespoke annotation workflow. We deliver a scoping proposal within 48 hours of brief receipt.",
-            tags: ["Label Consistency Audits", "IAA Measurement (κ ≥ 0.80 / κ ≥ 0.75)", "Custom Modality", "48hr Scoping SLA"],
+                "We provide a systematic review of annotated image datasets, covering IAA measurement, label consistency audits, and structured error reporting before model training.",
+            tags: ["IAA", "Audit", "Quality Report"],
         },
     ],
 };
 
 export const COMPLIANCE = {
-    label: "Built for EU Enterprise",
-    title: "Your Legal Team Will Be Satisfied Before Day One.",
+    label: "Trust & Security",
+    title: "We begin each engagement by establishing agreements.",
     description:
-        "We operate as a GDPR Article 28 Data Processor. Our contract stack is designed specifically for European AI companies that cannot afford compliance risk in their data pipeline.",
-    checklist: [
-        "GDPR Article 28 & EU SCCs Module 2 (Controller-to-Processor)",
-        "NDA + DPA + MSA signed before a single data item is shared",
-        "Cohen's Kappa ≥ 0.80 (pairwise) and Fleiss' Kappa ≥ 0.75 (multi-annotator), measured on every production batch.",
-        "No data exported from your platform — annotators work inside your dashboard only",
-        "72-hour Personal Data Breach notification (GDPR Article 33)",
-        "Annual audit rights for your legal team",
-        "UU PDP No. 27/2022 (Indonesian data protection law) compliant",
-    ],
-    marketsTitle: "Markets We Serve",
-    markets: [
-        { country: "Germany", flag: "DE", law: "GDPR + BDSG" },
-        { country: "Austria", flag: "AT", law: "GDPR + DSG" },
-        { country: "Switzerland", flag: "CH", law: "GDPR + revDSG" },
-        { country: "Netherlands", flag: "NL", law: "GDPR + UAVG" },
-        { country: "Belgium", flag: "BE", law: "GDPR" },
-        { country: "Luxembourg", flag: "LU", law: "GDPR" },
+        "Before any data is shared, we require a signed NDA and Data Processing Agreement. We recognize training datasets as proprietary and handle them with strict confidentiality.",
+    items: [
+        {
+            icon: FileText,
+            title: "NDA + DPA",
+            body: "We sign this agreement before the project begins. Your dataset will remain confidential.",
+        },
+        {
+            icon: Shield,
+            title: "Data Security",
+            body: "We recorded the technical and organisational security measures used in each engagement.",
+        },
+        {
+            icon: CheckCircle,
+            title: "IAA on Every Batch",
+            body: "Cohen\u2019s \u03BA (\u2265 0.80) and Fleiss\u2019 \u03BA (\u2265 0.75) will be measured and reported for each delivery.",
+        },
     ],
 };
 
 export const JOURNEY = {
     label: "The Engagement Journey",
-    title: "From First Contact to Dedicated Infrastructure.",
+    title: "From Pilot to Production.",
     description:
         "Every client begins with a low-risk, proof-of-concept pilot. Every retainer begins with trust.",
     steps: [
@@ -102,38 +101,38 @@ export const JOURNEY = {
             icon: FlaskConical,
             title: "The Paid Pilot",
             description:
-                "A fixed-scope, flat-rate engagement — approximately one week of dedicated annotation inside your dashboard. We establish our Average Handling Time, deliver a full IAA quality report (Cohen's κ ≥ 0.80 / Fleiss' κ ≥ 0.75), and prove the pipeline before any long-term commitment.",
-            tag: "Entry Point · Flat Rate",
+                "We offer a flat-rate project with a clear scope to show how our pipeline works. Our team will annotate a sample of your data, provide a complete IAA quality report, and set up the workflow. This all happens before you make any long-term decisions.",
+            tag: "Entry Point \u00B7 Flat Rate",
             note: "Pilot fee credited to first production invoice on proceeding.",
         },
         {
             icon: Clock,
-            title: "On-Demand Hourly (BYOT)",
+            title: "On-Demand Annotation",
             description:
-                "Flexible, per-annotator-hour billing across all four service verticals. Scale up or down each month. No headcount commitment. Rates fixed in a signed SOW before work begins.",
-            tag: "Core Model · EUR/hr",
+                "We offer flexible per-project or per-hour annotation services once the pilot confirms the workflow. You can scale services according to your dataset volume. Rates are fixed in a signed statement of work before the project begins.",
+            tag: "Flexible \u00B7 Per-Project",
         },
         {
             icon: TrendingUp,
-            title: "Volume Discounts",
+            title: "Volume Engagements",
             description:
-                "Commit to a guaranteed monthly hour block and receive tiered rate reductions — incentivising you to consolidate your annotation outsourcing with a single, fully accountable partner.",
-            tag: "Exclusivity · Sliding Scale",
+                "When you commit to a clear project scope, you get structured pricing. This approach works well for teams that need ongoing annotation for different dataset versions or model updates.",
+            tag: "Structured Pricing",
         },
         {
             icon: Building2,
-            title: "Managed Pods & FTE Retainers",
+            title: "Dedicated Team",
             description:
-                "A dedicated annotator or a complete autonomous team (3 Annotators + 1 QA Lead) reserved exclusively for your pipeline. Guaranteed monthly capacity. Your engineering directors receive only validated, report-accompanied datasets.",
-            tag: "Peak Model · Monthly Retainer",
+                "Get a dedicated annotation team focused on your projects. You\u2019ll work with the same annotators for steady quality and output. This is ideal for teams looking for a reliable, long-term annotation partner.",
+            tag: "Long-Term \u00B7 Dedicated",
         },
     ],
 };
 
 export const CTA = {
-    title: "Ready to Prove the Pipeline?",
+    title: "Ready to Annotate Your Dataset?",
     description:
-        "Start with a paid pilot. One week. Your dashboard. A complete IAA quality report (Cohen's κ ≥ 0.80 / Fleiss' κ ≥ 0.75) on delivery. No long-term commitment required.",
+        "Begin with a flat-rate pilot for one week, using a representative sample of your dataset. You will receive a comprehensive IAA quality report upon delivery. No long-term commitment is required.",
     primary: "Request a Pilot",
     secondary: "Book a Consultation",
 };
