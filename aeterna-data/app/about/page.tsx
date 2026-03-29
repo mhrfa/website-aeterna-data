@@ -5,7 +5,7 @@ import AnimatedSection from '@/components/ui/AnimatedSection';
 
 export const metadata: Metadata = {
     title: 'About — Aeterna Data',
-    description: 'Aeterna Data is a specialized image annotation company for computer vision datasets and visual AI evaluation. Small team. Structured workflows. IAA-measured quality on every batch.',
+    description: 'Aeterna Data is a specialized image annotation company focused on computer vision datasets and visual AI evaluation. Small team. Structured workflows. IAA-measured quality.',
     robots: {
         index: true,
         follow: true,
@@ -108,7 +108,7 @@ export default function AboutPage() {
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                             {/* Column 1 — Crowd Platforms */}
                             <div className="bg-[var(--color-bg-surface)] border border-[var(--color-border)] rounded-2xl p-8">
-                                <h3 className="text-lg font-bold text-[var(--color-text-primary)] mb-6">Crowd Platforms</h3>
+                                <h3 className="font-semibold text-[var(--color-text-primary)] mb-6">Crowd Platforms</h3>
                                 <ul className="space-y-4 text-sm text-[var(--color-text-secondary)] leading-relaxed">
                                     <li className="flex items-start gap-3">
                                         <span className="text-[rgba(239,68,68,0.7)] mt-0.5 shrink-0">✗</span>
@@ -135,12 +135,12 @@ export default function AboutPage() {
 
                             {/* Column 2 — Aeterna Data (highlighted) */}
                             <div className="bg-[var(--color-bg-surface)] border-2 border-[var(--color-accent-cta)] rounded-2xl p-8 relative">
-                                <div className="absolute -top-3 left-1/2 -translate-x-1/2">
+                                <div className="absolute -top-3 left-6">
                                     <span className="bg-[var(--color-accent-cta)] text-white text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider">
                                         Our Approach
                                     </span>
                                 </div>
-                                <h3 className="text-lg font-bold text-[var(--color-text-primary)] mb-6">Aeterna Data</h3>
+                                <h3 className="font-semibold text-[var(--color-text-primary)] mb-6">Aeterna Data</h3>
                                 <ul className="space-y-4 text-sm text-[var(--color-text-secondary)] leading-relaxed">
                                     <li className="flex items-start gap-3">
                                         <span className="text-[var(--color-accent-cta)] mt-0.5 shrink-0">✓</span>
@@ -167,7 +167,7 @@ export default function AboutPage() {
 
                             {/* Column 3 — Large Enterprise Vendors */}
                             <div className="bg-[var(--color-bg-surface)] border border-[var(--color-border)] rounded-2xl p-8">
-                                <h3 className="text-lg font-bold text-[var(--color-text-primary)] mb-6">Large Enterprise Vendors</h3>
+                                <h3 className="font-semibold text-[var(--color-text-primary)] mb-6">Large Enterprise Vendors</h3>
                                 <ul className="space-y-4 text-sm text-[var(--color-text-secondary)] leading-relaxed">
                                     <li className="flex items-start gap-3">
                                         <span className="text-[rgba(239,68,68,0.7)] mt-0.5 shrink-0">✗</span>
@@ -342,7 +342,7 @@ export default function AboutPage() {
                         </h2>
                         <div className="text-[var(--color-text-secondary)] text-base leading-relaxed mb-12 max-w-3xl">
                             <p>
-                                Your training datasets are proprietary. At Aeterna Data, we handle every project under a clear legal framework. We always sign an NDA and a DPA before sharing any data.
+                                Our training datasets are proprietary. At Aeterna Data, we handle every project under a clear legal framework. We always sign an NDA and a DPA before sharing any data.
                             </p>
                         </div>
 
@@ -362,7 +362,7 @@ export default function AboutPage() {
                                 </span>
                                 <h3 className="text-base font-semibold text-[var(--color-text-primary)] mt-3">Data Processing Agreement (DPA)</h3>
                                 <p className="text-sm text-[var(--color-text-secondary)] mt-1 leading-relaxed">
-                                    Covers how we handle, store, and process your data. Includes provisions for data deletion after project completion.
+                                    GDPR Article 28 compliant. Defines how we process, store, and protect your data throughout the engagement.
                                 </p>
                             </div>
                             <div className="pb-6">
@@ -371,7 +371,7 @@ export default function AboutPage() {
                                 </span>
                                 <h3 className="text-base font-semibold text-[var(--color-text-primary)] mt-3">Data Security Policy</h3>
                                 <p className="text-sm text-[var(--color-text-secondary)] mt-1 leading-relaxed">
-                                    Outlines the technical and organizational measures we apply to protect your data throughout the annotation lifecycle.
+                                    Our internal security standards for handling client datasets. Covers access controls, storage protocols, and annotator device requirements.
                                 </p>
                             </div>
                         </div>
@@ -384,7 +384,7 @@ export default function AboutPage() {
                 <section className="py-20 relative w-full bg-[var(--color-bg-base)]">
                     <div className="max-w-4xl mx-auto px-6">
                         <p className="text-xs uppercase tracking-widest text-[var(--color-text-muted)] font-semibold mb-4">
-                            Target Clients
+                            Ideal Clients
                         </p>
                         <h2 className="text-3xl lg:text-4xl font-semibold text-[var(--color-text-primary)] mb-12">
                             Who We Work With
