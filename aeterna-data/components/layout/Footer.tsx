@@ -15,17 +15,20 @@ export default function Footer() {
                             Services
                         </h4>
                         <div className="flex flex-col space-y-0">
-                            <Link href="/services/computer-vision" className="block text-sm text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)] transition-colors duration-150 py-1.5 whitespace-nowrap">
-                                Computer Vision & Spatial
+                            <Link href="/services/bounding-box" className="block text-sm text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)] transition-colors duration-150 py-1.5 whitespace-nowrap">
+                                Bounding Box Annotation
                             </Link>
-                            <Link href="/services/nlp" className="block text-sm text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)] transition-colors duration-150 py-1.5 whitespace-nowrap">
-                                Advanced NLP & Multilingual
+                            <Link href="/services/segmentation" className="block text-sm text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)] transition-colors duration-150 py-1.5 whitespace-nowrap">
+                                Image Segmentation
                             </Link>
-                            <Link href="/services/rlhf" className="block text-sm text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)] transition-colors duration-150 py-1.5 whitespace-nowrap">
-                                RLHF & Model Alignment
+                            <Link href="/services/classification" className="block text-sm text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)] transition-colors duration-150 py-1.5 whitespace-nowrap">
+                                Image Classification
                             </Link>
-                            <Link href="/services/data-validation" className="block text-sm text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)] transition-colors duration-150 py-1.5 whitespace-nowrap">
-                                Data Validation & QA
+                            <Link href="/services/visual-rlhf" className="block text-sm text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)] transition-colors duration-150 py-1.5 whitespace-nowrap">
+                                Visual RLHF Evaluation
+                            </Link>
+                            <Link href="/services/dataset-qa" className="block text-sm text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)] transition-colors duration-150 py-1.5 whitespace-nowrap">
+                                Dataset Validation & QA
                             </Link>
                         </div>
                     </div>
