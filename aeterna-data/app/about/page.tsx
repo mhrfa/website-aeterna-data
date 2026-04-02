@@ -214,43 +214,17 @@ export default function AboutPage() {
                                     <h3 className="text-2xl font-bold text-[var(--color-text-primary)]">Aeterna</h3>
                                     <p className="text-sm text-[var(--color-text-muted)] mt-1">Founder & Director<br />PT Aeterna Data Intentio Logic</p>
 
-                                    <div className="border-t border-[var(--color-border)] my-6" />
 
-                                    <div className="space-y-4">
-                                        <div>
-                                            <span className="block text-xs uppercase tracking-widest text-[var(--color-text-muted)]">Age</span>
-                                            <span className="block text-sm font-medium text-[var(--color-text-primary)]">29</span>
-                                        </div>
-                                        <div>
-                                            <span className="block text-xs uppercase tracking-widest text-[var(--color-text-muted)]">Based in</span>
-                                            <span className="block text-sm font-medium text-[var(--color-text-primary)]">Bandung, Indonesia</span>
-                                        </div>
-                                        <div>
-                                            <span className="block text-xs uppercase tracking-widest text-[var(--color-text-muted)]">Origin</span>
-                                            <span className="block text-sm font-medium text-[var(--color-text-primary)]">Solo, Central Java</span>
-                                        </div>
-                                        <div>
-                                            <span className="block text-xs uppercase tracking-widest text-[var(--color-text-muted)]">Education</span>
-                                            <span className="block text-sm font-medium text-[var(--color-text-primary)]">PhD Candidate, Universitas Sebelas Maret</span>
-                                        </div>
-                                        <div>
-                                            <span className="block text-xs uppercase tracking-widest text-[var(--color-text-muted)]">Focus</span>
-                                            <span className="block text-sm font-medium text-[var(--color-text-primary)]">AI Data Quality & Annotation</span>
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
 
                             {/* RIGHT COLUMN — Founder statement */}
                             <div className="text-[var(--color-text-secondary)] text-base leading-relaxed space-y-5">
                                 <p>
-                                    Muhammad Rifqi Fauzan Arifin is the founder of Aeterna Data and leads its annotation projects. He is currently a PhD candidate in Linguistics at Universitas Sebelas Maret and has over two years of hands-on experience with annotation pipelines. His background includes team management, computer vision labeling, and RLHF evaluation.
+                                    Muhammad Rifqi Fauzan Arifin is the founder and lead annotator of Aeterna Data. With over two years of hands-on experience in annotation pipelines, including team management, bounding box labeling, and RLHF evaluation, he established Aeterna Data on the principle that annotation quality must be measurable rather than assumed.
                                 </p>
                                 <p>
-                                    Before founding Aeterna Data, he managed annotation teams at PT Mangrove Data Group. He supervised bounding box annotation and quality checks for large retail image datasets used in computer vision AI training.
-                                </p>
-                                <p>
-                                    He started Aeterna Data with a clear idea: annotation quality should be measurable, and only measurable quality is worth delivering.
+                                    Before founding Aeterna Data, he expanded an annotation team from two to fifty members in one year at his previous company, where he managed large-scale computer vision labeling and quality validation for retail AI training datasets. His leadership and expertise in annotation now strengthen Aeterna Data&apos;s operations.
                                 </p>
                             </div>
                         </div>
