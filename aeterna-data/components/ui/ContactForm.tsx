@@ -154,14 +154,20 @@ export default function ContactForm() {
                         className="w-full bg-[var(--color-bg-elevated)] border border-[var(--color-border)] rounded-lg px-4 py-3 text-sm text-[var(--color-text-primary)] placeholder-[var(--color-text-muted)] focus:outline-none focus:border-[var(--color-accent-cta)] focus:ring-1 focus:ring-[var(--color-accent-cta)] hover:border-[var(--color-border-hover)] transition-all duration-150 appearance-none cursor-pointer"
                     >
                         <option value="" disabled>Select your country</option>
-                        <option value="Germany">Germany</option>
-                        <option value="Austria">Austria</option>
-                        <option value="Switzerland">Switzerland</option>
-                        <option value="Netherlands">Netherlands</option>
-                        <option value="Belgium">Belgium</option>
-                        <option value="Luxembourg">Luxembourg</option>
-                        <option value="Other EU/EEA">Other EU/EEA</option>
-                        <option value="Outside EU/EEA">Outside EU/EEA</option>
+                        <option value="US">United States</option>
+                        <option value="GB">United Kingdom</option>
+                        <option value="DE">Germany</option>
+                        <option value="NL">Netherlands</option>
+                        <option value="FR">France</option>
+                        <option value="CA">Canada</option>
+                        <option value="AU">Australia</option>
+                        <option value="SG">Singapore</option>
+                        <option value="JP">Japan</option>
+                        <option value="KR">South Korea</option>
+                        <option value="IN">India</option>
+                        <option value="ID">Indonesia</option>
+                        <option value="other_eu">Other EU/EEA</option>
+                        <option value="other">Other</option>
                     </select>
                     <ChevronDown className="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-[var(--color-text-muted)] pointer-events-none" aria-hidden="true" />
                 </div>
@@ -181,12 +187,15 @@ export default function ContactForm() {
                         onChange={(e) => setEnquiryType(e.target.value)}
                         className="w-full bg-[var(--color-bg-elevated)] border border-[var(--color-border)] rounded-lg px-4 py-3 text-sm text-[var(--color-text-primary)] placeholder-[var(--color-text-muted)] focus:outline-none focus:border-[var(--color-accent-cta)] focus:ring-1 focus:ring-[var(--color-accent-cta)] hover:border-[var(--color-border-hover)] transition-all duration-150 appearance-none cursor-pointer"
                     >
-                        <option value="" disabled>Select enquiry type</option>
-                        <option value="request-pilot">Request a Paid Pilot</option>
-                        <option value="discovery-call">Book a Discovery Call</option>
-                        <option value="project-brief">Send a Project Brief</option>
-                        <option value="fte-retainer">Discuss FTE Retainer Pricing</option>
-                        <option value="managed-pod">Discuss Managed Pod Pricing</option>
+                        <option value="" disabled>What are you looking for?</option>
+                        <option value="pilot">Request a Paid Pilot</option>
+                        <option value="discovery">Book a Discovery Call</option>
+                        <option value="brief">Send a Project Brief</option>
+                        <option value="bounding_box">Bounding Box Annotation</option>
+                        <option value="segmentation">Image Segmentation</option>
+                        <option value="classification">Image Classification</option>
+                        <option value="visual_rlhf">Visual RLHF Evaluation</option>
+                        <option value="dataset_qa">Dataset Validation &amp; QA</option>
                         <option value="general">General Enquiry</option>
                     </select>
                     <ChevronDown className="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-[var(--color-text-muted)] pointer-events-none" aria-hidden="true" />

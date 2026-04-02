@@ -13,6 +13,27 @@ export async function POST(req: Request) {
             return NextResponse.json({ error: 'GDPR consent is required.' }, { status: 400 });
         }
 
+        const validCountries = [
+            'US', 'GB', 'DE', 'NL', 'FR',
+            'CA', 'AU', 'SG', 'JP', 'KR',
+            'IN', 'ID', 'other_eu', 'other'
+        ];
+
+        const validEnquiryTypes = [
+            'pilot', 'discovery', 'brief',
+            'bounding_box', 'segmentation',
+            'classification', 'visual_rlhf',
+            'dataset_qa', 'general'
+        ];
+
+        if (!validCountries.includes(country)) {
+            return NextResponse.json({ error: 'Invalid country selection.' }, { status: 400 });
+        }
+
+        if (!validEnquiryTypes.includes(enquiryType)) {
+            return NextResponse.json({ error: 'Invalid enquiry type selection.' }, { status: 400 });
+        }
+
         const html = `
             <h2>New Contact Enquiry — Aeterna Data</h2>
             <table style="text-align: left; width: 100%;">

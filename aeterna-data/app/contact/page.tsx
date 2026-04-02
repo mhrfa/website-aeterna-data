@@ -286,10 +286,6 @@ export default function ContactPage() {
                         <div className="flex flex-col">
                             {[
                                 {
-                                    title: "We serve DACH and Benelux exclusively.",
-                                    body: "Our current operating market is Germany, Austria, Switzerland, Netherlands, Belgium, and Luxembourg. If you are outside these markets, we may not be the right fit at this time."
-                                },
-                                {
                                     title: "We are B2B only.",
                                     body: "Aeterna Data works exclusively with business clients. We do not provide annotation services to individuals or consumer projects."
                                 },
@@ -302,8 +298,8 @@ export default function ContactPage() {
                                     body: "If your primary criteria is the lowest available rate, we are probably not the right partner. If quality, IAA measurement, legal accountability, and data sovereignty matter to your team, we would love to hear from you."
                                 },
                                 {
-                                    title: "We respond in English and Indonesian.",
-                                    body: "All client communication is conducted in English. We do not currently offer German, Dutch, or French language client support — though our annotators work in all of these languages."
+                                    title: "We respond in English.",
+                                    body: "All client communication is conducted in English. Project briefs, scoping proposals, and contracts are all in English."
                                 }
                             ].map((item, idx, arr) => (
                                 <AnimatedSection key={idx} delay={idx * 0.05} className="w-full">
