@@ -78,7 +78,7 @@ export default function ComputerVisionPage() {
                     </div>
 
                     {/* Headline */}
-                    <h1 className="text-5xl lg:text-7xl font-bold tracking-tight leading-none text-[var(--color-text-primary)]">
+                    <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold tracking-tight leading-none text-[var(--color-text-primary)]">
                         Annotation That Sees What Your Model Needs to Learn.
                     </h1>
 

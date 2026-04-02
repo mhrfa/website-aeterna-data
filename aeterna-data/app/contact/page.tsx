@@ -73,7 +73,7 @@ export default function ContactPage() {
                     </div>
 
                     {/* Headline */}
-                    <h1 className="text-5xl lg:text-7xl font-bold tracking-tight leading-none text-[var(--color-text-primary)] mx-auto max-w-3xl">
+                    <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold tracking-tight leading-none text-[var(--color-text-primary)] mx-auto max-w-3xl">
                         Start the Conversation.
                     </h1>
 

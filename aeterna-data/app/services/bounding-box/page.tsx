@@ -80,7 +80,7 @@ export default function BoundingBoxPage() {
                     </div>
 
                     {/* Headline */}
-                    <h1 className="text-5xl lg:text-7xl font-bold tracking-tight leading-none text-[var(--color-text-primary)]">
+                    <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold tracking-tight leading-none text-[var(--color-text-primary)]">
                         Bounding Box Annotation<br />for Object Detection Datasets.
                     </h1>
 

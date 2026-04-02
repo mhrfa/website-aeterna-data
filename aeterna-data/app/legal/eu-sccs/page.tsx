@@ -80,7 +80,7 @@ export default function EuSccsPage() {
                     </div>
 
                     {/* Headline */}
-                    <h1 className="text-5xl lg:text-7xl font-bold tracking-tight leading-none text-[var(--color-text-primary)] max-w-5xl mx-auto">
+                    <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold tracking-tight leading-none text-[var(--color-text-primary)] max-w-5xl mx-auto">
                         EU Standard Contractual Clauses, Module 2.
                     </h1>
 

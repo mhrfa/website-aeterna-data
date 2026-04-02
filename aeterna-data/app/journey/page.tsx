@@ -61,7 +61,7 @@ export default function JourneyPage() {
                     </div>
 
                     {/* Headline */}
-                    <h1 className="text-5xl lg:text-7xl font-bold tracking-tight leading-none text-[var(--color-text-primary)] mx-auto">
+                    <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold tracking-tight leading-none text-[var(--color-text-primary)] mx-auto">
                         From First Contact{' '}
                         <br className="hidden lg:block" />
                         to Validated Dataset.

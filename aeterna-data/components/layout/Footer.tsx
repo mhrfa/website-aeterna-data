@@ -7,7 +7,7 @@ export default function Footer() {
         <footer className="w-full bg-[var(--color-bg-base)]">
             {/* Main link grid */}
             <div className="max-w-7xl mx-auto px-8 py-20">
-                <div className="grid grid-cols-2 md:grid-cols-2 lg:flex lg:flex-row lg:gap-x-24 xl:gap-x-32 gap-y-12 w-full">
+                <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 w-full">
 
                     {/* Column 1 — Services */}
                     <div>
@@ -79,7 +79,7 @@ export default function Footer() {
                     </div>
 
                     {/* Column 5 — Follow Us */}
-                    <div className="col-span-2 md:col-span-1">
+                    <div>
                         <h4 className="text-xs font-semibold tracking-widest uppercase text-[var(--color-text-muted)] mb-5">
                             Follow Us
                         </h4>
@@ -113,13 +113,24 @@ export default function Footer() {
 
             {/* Bottom bar */}
             <div className="max-w-7xl mx-auto px-8 py-6">
-                <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+                <div className="flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-0 text-center sm:text-left">
                     {/* Copyright left */}
                     <p className="text-sm text-[var(--color-text-muted)]">
                         Copyright © {new Date().getFullYear()} {SITE_META.companyName}. All rights reserved.
                     </p>
 
-
+                    {/* Legal links right */}
+                    <nav className="flex items-center gap-4 sm:gap-5 flex-wrap justify-center sm:justify-end" aria-label="Legal links">
+                        <Link href="/cookie-policy" className="text-sm text-[var(--color-text-muted)] hover:text-[var(--color-text-primary)] transition-colors py-1.5">
+                            Cookie Policy
+                        </Link>
+                        <Link href="/terms-of-service" className="text-sm text-[var(--color-text-muted)] hover:text-[var(--color-text-primary)] transition-colors py-1.5">
+                            Terms of Service
+                        </Link>
+                        <Link href="/privacy-policy" className="text-sm text-[var(--color-text-muted)] hover:text-[var(--color-text-primary)] transition-colors py-1.5">
+                            Privacy Policy
+                        </Link>
+                    </nav>
                 </div>
             </div>
         </footer>

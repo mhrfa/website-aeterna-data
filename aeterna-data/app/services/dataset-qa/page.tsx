@@ -80,7 +80,7 @@ export default function DatasetQaPage() {
                     </div>
 
                     {/* Headline */}
-                    <h1 className="text-5xl lg:text-7xl font-bold tracking-tight leading-none text-[var(--color-text-primary)]">
+                    <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold tracking-tight leading-none text-[var(--color-text-primary)]">
                         Dataset Validation &amp; QA<br />for Annotated Image Datasets.
                     </h1>
 

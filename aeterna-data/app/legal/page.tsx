@@ -61,7 +61,7 @@ export default function LegalIndexPage() {
                     </div>
 
                     {/* Headline */}
-                    <h1 className="text-5xl lg:text-7xl font-bold tracking-tight leading-none text-[var(--color-text-primary)] max-w-4xl mx-auto">
+                    <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold tracking-tight leading-none text-[var(--color-text-primary)] max-w-4xl mx-auto">
                         Legal Documents<br />& Compliance References.
                     </h1>
 

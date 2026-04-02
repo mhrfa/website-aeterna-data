@@ -80,7 +80,7 @@ export default function VisualRlhfPage() {
                     </div>
 
                     {/* Headline */}
-                    <h1 className="text-5xl lg:text-7xl font-bold tracking-tight leading-none text-[var(--color-text-primary)]">
+                    <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold tracking-tight leading-none text-[var(--color-text-primary)]">
                         Visual RLHF Evaluation<br />for Image Generation Models.
                     </h1>
 
