@@ -135,10 +135,9 @@ export default function ImpressumPage() {
                             Service Description
                         </h2>
                         <p className="text-[var(--color-text-secondary)] leading-relaxed">
-                            Aeterna Data (PT Aeterna Data Intentio Logic) provides image annotation and visual AI
-                            evaluation services for machine learning teams, including bounding box annotation, image
-                            segmentation, image classification, visual RLHF evaluation, and dataset validation and quality
-                            assurance. All services are delivered on a business-to-business (B2B) basis only. Aeterna
+                            Aeterna Data (PT Aeterna Data Intentio Logic) provides AI data annotation, multilingual
+                            linguistic analysis, RLHF and model alignment, and data validation services to business
+                            clients. All services are delivered on a business-to-business (B2B) basis only. Aeterna
                             Data does not offer services to consumers.
                         </p>
                     </div>
@@ -158,9 +157,9 @@ export default function ImpressumPage() {
                                 </a>
                             </p>
                             <p className="text-[var(--color-text-secondary)] leading-relaxed">
-                                A full Data Processing Agreement (DPA) is available to clients upon request and is
-                                executed prior to any data processing activity. EU Standard Contractual Clauses (Module 2)
-                                are annexed to the DPA for EEA-to-Indonesia personal data transfers.
+                                A full Data Processing Agreement (DPA), including EU Standard Contractual Clauses
+                                (Module 2, Controller-to-Processor), is available to clients upon request and is
+                                executed prior to any data processing activity.
                             </p>
                         </div>
                     </div>
@@ -191,6 +190,13 @@ export default function ImpressumPage() {
                                     <span className="mt-2 w-1.5 h-1.5 rounded-full bg-[var(--color-text-primary)] shrink-0" />
                                     <span className="text-[var(--color-text-secondary)] leading-relaxed">
                                         Indonesian Personal Data Protection Law (UU No. 27 Tahun 2022 / UU PDP)
+                                    </span>
+                                </li>
+                                <li className="flex items-start gap-3">
+                                    <span className="mt-2 w-1.5 h-1.5 rounded-full bg-[var(--color-text-primary)] shrink-0" />
+                                    <span className="text-[var(--color-text-secondary)] leading-relaxed">
+                                        German Telemediengesetz (TMG) §5 — where applicable as a service provider targeting
+                                        German residents
                                     </span>
                                 </li>
                             </ul>

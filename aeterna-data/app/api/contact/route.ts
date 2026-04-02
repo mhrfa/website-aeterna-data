@@ -31,7 +31,7 @@ export async function POST(req: Request) {
         }
 
         if (!validEnquiryTypes.includes(enquiryType)) {
-            return NextResponse.json({ error: 'Invalid enquiry type selection.' }, { status: 400 });
+            return NextResponse.json({ error: 'Invalid enquiry type.' }, { status: 400 });
         }
 
         const html = `

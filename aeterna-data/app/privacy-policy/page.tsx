@@ -71,7 +71,6 @@ export default function PrivacyPolicyPage() {
                                 </div>
                                 <div className="grid grid-cols-1 sm:grid-cols-[160px_1fr] gap-2">
                                     <span className="text-[var(--color-text-muted)] text-sm font-semibold uppercase tracking-wider">Address</span>
-                                    {/* TODO: Replace with registered address before launch */}
                                     <span className="text-[var(--color-text-primary)] font-mono text-sm">[PLACEHOLDER — fill before launch]</span>
                                 </div>
                                 <div className="grid grid-cols-1 sm:grid-cols-[160px_1fr] gap-2">
@@ -472,16 +471,45 @@ export default function PrivacyPolicyPage() {
                                 If you believe your personal data has been processed unlawfully, you have the right to lodge a complaint with the relevant supervisory authority in your EU/EEA member state.
                             </p>
                             <p className="text-[var(--color-text-secondary)] leading-relaxed">
-                                You may lodge a complaint with the data protection supervisory authority in the EU/EEA member state where you reside, work, or where the alleged infringement took place. A list of EU/EEA supervisory authorities is available at:{' '}
-                                <a
-                                    href="https://edpb.europa.eu/about-edpb/about-edpb/members_en"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="text-[var(--color-text-primary)] hover:underline transition-colors break-all"
-                                >
-                                    https://edpb.europa.eu/about-edpb/about-edpb/members_en
-                                </a>
+                                For clients and contacts in Germany, the relevant authority is:
                             </p>
+                            <div className="bg-[var(--color-bg-surface)] border border-[var(--color-border)] rounded-2xl p-6 md:p-8 space-y-4">
+                                <div className="grid grid-cols-1 sm:grid-cols-[160px_1fr] gap-2">
+                                    <span className="text-[var(--color-text-muted)] text-sm font-semibold uppercase tracking-wider">Authority</span>
+                                    <span className="text-[var(--color-text-primary)]">Der Bundesbeauftragte für den Datenschutz und die Informationsfreiheit (BfDI)</span>
+                                </div>
+                                <div className="grid grid-cols-1 sm:grid-cols-[160px_1fr] gap-2">
+                                    <span className="text-[var(--color-text-muted)] text-sm font-semibold uppercase tracking-wider">Website</span>
+                                    <a
+                                        href="https://www.bfdi.bund.de"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="text-[var(--color-text-primary)] hover:underline transition-colors break-all"
+                                    >
+                                        https://www.bfdi.bund.de
+                                    </a>
+                                </div>
+                            </div>
+                            <p className="text-[var(--color-text-secondary)] leading-relaxed">
+                                For clients and contacts in the Netherlands:
+                            </p>
+                            <div className="bg-[var(--color-bg-surface)] border border-[var(--color-border)] rounded-2xl p-6 md:p-8 space-y-4">
+                                <div className="grid grid-cols-1 sm:grid-cols-[160px_1fr] gap-2">
+                                    <span className="text-[var(--color-text-muted)] text-sm font-semibold uppercase tracking-wider">Authority</span>
+                                    <span className="text-[var(--color-text-primary)]">Autoriteit Persoonsgegevens (AP)</span>
+                                </div>
+                                <div className="grid grid-cols-1 sm:grid-cols-[160px_1fr] gap-2">
+                                    <span className="text-[var(--color-text-muted)] text-sm font-semibold uppercase tracking-wider">Website</span>
+                                    <a
+                                        href="https://www.autoriteitpersoonsgegevens.nl"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="text-[var(--color-text-primary)] hover:underline transition-colors break-all"
+                                    >
+                                        https://www.autoriteitpersoonsgegevens.nl
+                                    </a>
+                                </div>
+                            </div>
                             <p className="text-[var(--color-text-secondary)] leading-relaxed">
                                 You may also contact the supervisory authority in any EU/EEA member state where you reside or work.
                             </p>

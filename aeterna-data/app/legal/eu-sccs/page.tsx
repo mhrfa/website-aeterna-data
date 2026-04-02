@@ -90,23 +90,23 @@ export default function EuSccsPage() {
                     </p>
 
                     {/* Stat Strip */}
-                    <div className="grid grid-cols-2 gap-y-8 gap-x-4 sm:flex sm:flex-wrap justify-center items-center sm:gap-4 mt-10 font-mono text-sm text-center">
-                        <div className="flex flex-col items-center text-center">
+                    <div className="flex flex-wrap justify-center items-center gap-4 mt-10 font-mono text-sm">
+                        <div className="flex flex-col items-center">
                             <span className="text-[var(--color-text-primary)] font-bold">EU 2021/914</span>
                             <span className="text-[var(--color-text-muted)] text-xs uppercase tracking-widest mt-1">Legal Basis</span>
                         </div>
                         <span className="text-[var(--color-border-subtle)] hidden sm:block">|</span>
-                        <div className="flex flex-col items-center text-center">
+                        <div className="flex flex-col items-center">
                             <span className="text-[var(--color-text-primary)] font-bold">Module 2</span>
                             <span className="text-[var(--color-text-muted)] text-xs uppercase tracking-widest mt-1">Controller → Processor</span>
                         </div>
                         <span className="text-[var(--color-border-subtle)] hidden sm:block">|</span>
-                        <div className="flex flex-col items-center text-center">
+                        <div className="flex flex-col items-center">
                             <span className="text-[var(--color-text-primary)] font-bold">Day One</span>
                             <span className="text-[var(--color-text-muted)] text-xs uppercase tracking-widest mt-1">Executed Before Data Sharing</span>
                         </div>
                         <span className="text-[var(--color-border-subtle)] hidden sm:block">|</span>
-                        <div className="flex flex-col items-center text-center">
+                        <div className="flex flex-col items-center">
                             <span className="text-[var(--color-text-primary)] font-bold">Art. 46(2)c</span>
                             <span className="text-[var(--color-text-muted)] text-xs uppercase tracking-widest mt-1">GDPR Transfer Mechanism</span>
                         </div>
@@ -428,7 +428,7 @@ export default function EuSccsPage() {
                                     Clause 8.6 of the EU SCCs Module 2 requires the data importer to implement technical and organisational security measures appropriate to the risk posed by the processing — taking into account the state of the art, the costs of implementation, the nature, scope, context and purposes of processing, and the risks to the rights and freedoms of natural persons.
                                 </p>
                                 <p>
-                                    Aeterna Data's technical and organisational measures (TOMs) are documented in the DPA and encompass Aeterna Data's annotation workflow security practices and internal security protocols. A core security measure is that annotation is performed inside the client's own annotation environment — personal data does not traverse Aeterna Data's infrastructure.
+                                    Aeterna Data's technical and organisational measures (TOMs) are documented in the DPA and encompass both the BYOT model's inherent data protection characteristics and Aeterna Data's internal security protocols. The BYOT model is itself a significant security measure — because annotation is performed inside the client's own environment, personal data does not traverse Aeterna Data's infrastructure.
                                 </p>
 
                                 <h3 className="text-xl font-semibold text-[var(--color-text-primary)] mt-8 mb-4">
@@ -437,7 +437,7 @@ export default function EuSccsPage() {
 
                                 <div className="space-y-0">
                                     {[
-                                        { title: "Data Residency", body: "Personal data remains in the client's own environment throughout the annotation engagement. Aeterna Data's annotators access the data via client-provisioned credentials — the data does not leave the client's infrastructure at any point." },
+                                        { title: "BYOT Data Residency", body: "Personal data remains in the client's own environment throughout the annotation engagement. Aeterna Data's annotators access the data via client-provisioned credentials — the data does not leave the client's infrastructure at any point." },
                                         { title: "Per-Annotator Access Controls", body: "Each annotator is provisioned with individual, unique access credentials by the client. Credentials are not shared between annotators. Access is revoked immediately upon annotator rotation or engagement end." },
                                         { title: "Individual NDA Binding", body: "Every annotator who accesses personal data in the client's environment has signed an individual NDA that binds them to confidentiality obligations specific to the engagement — creating individual-level contractual accountability beyond the entity-level DPA." },
                                         { title: "Breach Notification — 72 Hours", body: "In the event of a personal data breach at Aeterna Data, the client is notified within 72 hours of Aeterna Data becoming aware of the breach — consistent with GDPR Article 33 timelines. Breach notification procedures are specified in the DPA." },
@@ -498,7 +498,7 @@ export default function EuSccsPage() {
                                     Under Clause 13 of the EU SCCs Module 2, the supervisory authority of the member state in which the data exporter is established has authority over the SCCs. If multiple EU member state supervisory authorities could claim jurisdiction, the parties may designate a lead supervisory authority.
                                 </p>
                                 <p>
-                                    Aeterna Data's standard SCCs designate the Dutch Data Protection Authority (Autoriteit Persoonsgegevens, AP) as the lead supervisory authority, and Dutch law as the governing law of the SCCs. For clients established in other EU member states, the SCCs can be executed with the relevant national supervisory authority designated instead — this is specified during DPA negotiation.
+                                    Aeterna Data's standard SCCs designate the Dutch Data Protection Authority (Autoriteit Persoonsgegevens, AP) as the lead supervisory authority, and Dutch law as the governing law of the SCCs — reflecting Aeterna Data's primary target market in the Netherlands. For clients established in Germany, Austria, Belgium, or Luxembourg, the SCCs can be executed with the relevant national supervisory authority designated instead — this is specified during DPA negotiation.
                                 </p>
                             </div>
 
@@ -552,7 +552,7 @@ export default function EuSccsPage() {
                                 <div className="bg-[rgba(74,124,255,0.08)] border border-[rgba(74,124,255,0.20)] rounded-xl p-5 mt-6 relative overflow-hidden" role="note" aria-label="EU AI Act deadline notice">
                                     <div className="absolute top-0 right-0 w-32 h-32 bg-[var(--color-accent-cta)] opacity-10 rounded-full blur-2xl -mr-16 -mt-16 pointer-events-none" />
                                     <p className="text-sm text-[var(--color-text-primary)] leading-relaxed font-medium relative z-10">
-                                        EU AI Act high-risk system requirements take full effect August 2, 2026. For AI teams annotating personal data for high-risk applications within scope of the Act, the time to establish a compliant annotation processor relationship with documented IAA measurement is before the deadline. Procurement and legal review typically takes 4–8 weeks.
+                                        EU AI Act high-risk system requirements take full effect August 2, 2026. For EU AI teams annotating personal data for high-risk applications, the time to establish a compliant annotation processor relationship — with valid EU SCCs and documented IAA measurement — is before Q2 2026. Procurement and legal review of a new processor relationship typically takes 4–8 weeks.
                                     </p>
                                 </div>
                             </AnimatedSection>
@@ -645,7 +645,7 @@ export default function EuSccsPage() {
                                     },
                                     {
                                         question: "Who is the lead supervisory authority?",
-                                        answer: "Aeterna Data's standard SCCs designate the Dutch Data Protection Authority (AP) and Dutch law. For clients established in other EU member states, the relevant national authority can be designated instead — specified during DPA negotiation."
+                                        answer: "Aeterna Data's standard SCCs designate the Dutch Data Protection Authority (AP) and Dutch law. For clients established in Germany, Austria, Belgium, or Luxembourg, the relevant national authority can be designated instead — specified during DPA negotiation."
                                     },
                                     {
                                         question: "How are annotators bound by the SCCs?",

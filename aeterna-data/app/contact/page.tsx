@@ -291,7 +291,7 @@ export default function ContactPage() {
                                 },
                                 {
                                     title: "Contracts are non-negotiable.",
-                                    body: "Our MSA, NDA, DPA, and EU SCCs are standard. We do not begin work without the full contract stack executed. If your procurement process cannot accommodate this, we are likely not a fit."
+                                    body: "Our MSA, NDA, and DPA are standard. We do not begin work without the full contract stack executed. If your procurement process cannot accommodate this, we are likely not a fit."
                                 },
                                 {
                                     title: "We do not compete on price alone.",
