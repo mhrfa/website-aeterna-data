@@ -104,7 +104,7 @@ export default function PricingPage() {
                                 Aeterna Data's rates are determined by four factors: the service vertical, the task complexity, the IAA threshold required, and the volume commitment. All four are discussed in a discovery call and fixed in a signed SOW before work begins. You always know your rate before you pay it.
                             </p>
                             <p>
-                                What we can tell you: our rates are positioned for EU enterprise teams — not for the cheapest annotation on the market. If cost is your only criteria, we are probably not the right fit. If quality, legal accountability, and IAA measurement matter to your team, request a call.
+                                We base our rates on the quality process we follow. While our prices might not be the lowest, we are committed to providing reliable results. If cost is your only criteria, we are probably not the right fit. If quality, legal accountability, and IAA measurement matter to your team, request a call.
                             </p>
                         </div>
                     </div>
@@ -172,7 +172,7 @@ export default function PricingPage() {
                                     <Clock className="w-6 h-6 text-[var(--color-text-muted)] mt-4" aria-hidden="true" />
                                     <h3 className="text-2xl font-bold text-[var(--color-text-primary)] mt-3">On-Demand Hourly</h3>
                                     <p className="text-base text-[var(--color-text-secondary)] mt-4 leading-relaxed">
-                                        Flexible, per-annotator-hour billing across all four service verticals. Rates are fixed in a signed SOW before work begins. Scale up or down each month with no headcount commitment. The BYOT model in its purest form.
+                                        Flexible, per-annotator-hour billing across all five service verticals. Rates are fixed in a signed SOW before work begins. Scale up or down each month with no headcount commitment.
                                     </p>
                                     <div className="mt-6 mb-3">
                                         <h4 className="text-xs uppercase tracking-widest text-[var(--color-text-muted)]">What you get</h4>
@@ -185,7 +185,7 @@ export default function PricingPage() {
                                         <li className="flex gap-2 items-start"><span className="text-[var(--color-accent-cta)] mt-0.5">→</span> Complete quality report with every delivery</li>
                                     </ul>
                                     <p className="text-sm text-[var(--color-text-muted)] mt-4 italic">
-                                        Rate depends on: service vertical, task complexity, IAA threshold, and language.
+                                        Rate depends on: service vertical, task complexity, IAA threshold, and volume.
                                     </p>
                                     <Link href="/contact" className="mt-6 flex items-center justify-center w-full border border-[var(--color-border-subtle)] text-[var(--color-text-secondary)] font-semibold py-3.5 rounded-lg hover:border-[var(--color-border-hover)] hover:text-[var(--color-text-primary)] transition-all duration-200" aria-label="Request a quote for hourly on-demand work">
                                         Request a Quote
@@ -248,7 +248,7 @@ export default function PricingPage() {
                                         <li className="flex gap-2 items-start"><span className="text-[var(--color-accent-cta)] mt-0.5">→</span> Guaranteed full-time monthly capacity</li>
                                         <li className="flex gap-2 items-start"><span className="text-[var(--color-accent-cta)] mt-0.5">→</span> Billed monthly in advance</li>
                                         <li className="flex gap-2 items-start"><span className="text-[var(--color-accent-cta)] mt-0.5">→</span> Full IAA measurement maintained</li>
-                                        <li className="flex gap-2 items-start"><span className="text-[var(--color-accent-cta)] mt-0.5">→</span> Specialist tier available for NLP and RLHF</li>
+                                        <li className="flex gap-2 items-start"><span className="text-[var(--color-accent-cta)] mt-0.5">→</span> Specialist tier available for Visual RLHF evaluation tasks</li>
                                     </ul>
                                     <div className="bg-[var(--color-bg-elevated)] border border-[var(--color-border)] rounded-xl p-4 mt-6">
                                         <div className="text-xs uppercase tracking-widest text-[var(--color-text-muted)] mb-2">Ideal for</div>
@@ -323,12 +323,12 @@ export default function PricingPage() {
                                 {
                                     num: "01",
                                     title: "Service Vertical",
-                                    body: "The annotation type determines the base rate tier. Computer Vision and Data Validation sit at one end of the range. RLHF and Model Alignment sit at the other — requiring domain expertise, rubric comprehension, and calibrated judgment that standard annotation does not."
+                                    body: "The annotation type determines the base rate tier. Bounding box and image classification sit at one end of the range. Image segmentation and Visual RLHF evaluation sit at the other — requiring greater precision, longer per-item handling time, and more intensive quality measurement."
                                 },
                                 {
                                     num: "02",
                                     title: "Task Complexity",
-                                    body: "Within each vertical, complexity varies significantly. Bounding box annotation is faster and less cognitively demanding than polygon segmentation. Basic NER is different from deep semantic tagging with Appraisal Theory dimensions. Complexity is assessed during scoping."
+                                    body: "Within computer vision, complexity varies significantly. Bounding box annotation on standard objects is faster and less demanding than polygon segmentation on complex scenes. Visual RLHF evaluation with multi-dimensional rubrics requires calibrated judgment that standard annotation does not. Complexity is assessed during scoping."
                                 },
                                 {
                                     num: "03",
@@ -437,16 +437,12 @@ export default function PricingPage() {
                                     body: "Projects requiring Cohen's Kappa ≥ 0.85 or above require smaller batch sizes, more frequent calibration checks, and higher annotator selection standards."
                                 },
                                 {
-                                    title: "Non-English Languages",
-                                    body: "Multilingual annotation requiring native or near-native proficiency in non-English languages — particularly low-resource languages — requires specialist annotator sourcing."
-                                },
-                                {
                                     title: "Rush Turnaround",
                                     body: "Batches requiring delivery in under 5 working days attract a rush premium. Rush availability is subject to annotator capacity and must be specified in the SOW before work begins."
                                 },
                                 {
-                                    title: "Complex Rubric or Guideline",
-                                    body: "Tasks with multi-dimensional evaluation frameworks — such as RLHF preference ranking using Appraisal Theory dimensions — require extended annotator training and calibration before pilot begins."
+                                    title: "Multi-Dimensional Evaluation Rubric",
+                                    body: "Visual RLHF tasks with complex multi-dimensional evaluation frameworks require extended annotator briefing and calibration before the pilot begins. The rubric is designed and validated during scoping — this is included in the pilot scope."
                                 },
                                 {
                                     title: "Very High Volume, Fast Ramp",
@@ -489,7 +485,7 @@ export default function PricingPage() {
                                 {
                                     icon: FileCheck,
                                     title: "Full Contract Stack",
-                                    body: "NDA, DPA, EU SCCs, MSA, and SOW — all executed before work begins."
+                                    body: "NDA, DPA, MSA, and SOW — all executed before work begins."
                                 },
                                 {
                                     icon: BarChart2,
@@ -513,8 +509,8 @@ export default function PricingPage() {
                                 },
                                 {
                                     icon: Lock,
-                                    title: "BYOT Model",
-                                    body: "Annotation always runs inside your dashboard. Your data never leaves your environment."
+                                    title: "Your Platform",
+                                    body: "Annotation runs inside your annotation platform. Your data stays in your environment throughout the engagement."
                                 },
                                 {
                                     icon: Clock,
@@ -613,7 +609,7 @@ export default function PricingPage() {
                                 { item: "FTE Retainer", detail: "Monthly in advance — Net 14 days" },
                                 { item: "Managed Pod", detail: "Monthly in advance — Net 14 days" },
                                 { item: "Late Payment", detail: "1.5% per month on overdue balances" },
-                                { item: "Tax", detail: "Indonesian VAT (PPN) applied where applicable. EU clients: reverse charge mechanism applies — you account for VAT in your jurisdiction." }
+                                { item: "Tax", detail: "Indonesian VAT (PPN) applied where applicable under Indonesian law. International clients should confirm applicable VAT treatment with their own tax advisor." }
                             ].map((row, idx) => (
                                 <AnimatedSection key={idx} delay={idx * 0.04} className="w-full">
                                     <div className="flex justify-between items-start border-b border-[var(--color-border)] py-4 gap-4">
