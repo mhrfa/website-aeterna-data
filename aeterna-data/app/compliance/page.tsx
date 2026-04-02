@@ -16,25 +16,25 @@ const complianceLinks = [
         title: 'GDPR & DPA',
         href: '/privacy-policy',
         icon: ShieldCheck,
-        description: 'Detailed information regarding our data processing practices under GDPR Article 28. Discover how we protect personal data and ensure compliance as a trusted Data Processor.',
+        description: 'Aeterna Data processes personal data as a data processor under GDPR Article 28. The Data Processing Agreement documents the subject matter, duration, nature, and purpose of processing — along with the technical and organisational measures that protect client data throughout every annotation engagement. Executed after the NDA and before any project data is shared.',
     },
     {
         title: 'EU SCCs Module 2',
         href: '/legal/eu-sccs',
         icon: FileText,
-        description: 'Our governing framework for international data transfers. Review the Standard Contractual Clauses (Module 2) utilized for safeguarding data transfers outside the EEA.',
+        description: 'Indonesia does not benefit from an EU adequacy decision. EU Standard Contractual Clauses Module 2 — adopted under Commission Implementing Decision EU 2021/914 — are the legal mechanism for transferring personal data from the EEA to Aeterna Data under GDPR Article 46(2)(c). Annexed to every DPA. Executed before data sharing begins. Standard Commission text, unmodified.',
     },
     {
         title: 'Data Security Policy',
         href: '/legal/data-security-policy',
         icon: Lock,
-        description: 'Comprehensive technical and organizational measures (TOMs). Learn about the stringent security controls we employ to maintain optimal data confidentiality and integrity.',
+        description: 'Documents the security measures Aeterna Data applies to protect client data across every annotation engagement. Covers the data residency model — where client data stays in the client\x27s own annotation environment — per-annotator access controls, 72-hour breach notification, and data deletion at engagement end. Constitutes the technical and organisational measures (TOMs) documentation under GDPR Article 32.',
     },
     {
         title: 'Impressum',
         href: '/impressum',
         icon: Building,
-        description: 'Mandatory company disclosures and identification information. Access our direct contact details, commercial registry information, and authorized representatives.',
+        description: 'Mandatory disclosure of Aeterna Data\x27s legal identity. Contains the full legal entity name (PT Aeterna Data Intentio Logic), company registration number (NIB), tax identification (NPWP), registered address in Indonesia, and direct contact details for formal and legal enquiries.',
     },
 ];
 
@@ -55,7 +55,7 @@ export default function CompliancePage() {
                             Compliance Hub
                         </h1>
                         <p className="text-lg md:text-xl text-[var(--color-text-secondary)] leading-relaxed">
-                            A centralized directory for Aeterna Data's legal documents, data protection frameworks, and security policies.
+                            Legal documents, data protection instruments, and security policies for every Aeterna Data client engagement. Available for review before any commitment is made.
                         </p>
                     </AnimatedSection>
                 </div>
