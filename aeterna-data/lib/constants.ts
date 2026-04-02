@@ -12,7 +12,7 @@ export const SITE_META = {
 export const NAV_LINKS = [
     { label: "Services", href: "/services" },
     { label: "Compliance", href: "/compliance" },
-    { label: "The Journey", href: "#journey" },
+    { label: "The Journey", href: "/journey" },
 ];
 
 export const HERO = {
