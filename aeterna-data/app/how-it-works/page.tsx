@@ -139,7 +139,7 @@ export default function HowItWorksPage() {
                                 <ul className="space-y-3 text-sm text-[var(--color-text-secondary)]">
                                     <li className="flex items-start gap-2"><span className="text-[var(--color-text-muted)] mt-0.5">•</span> A brief description of your annotation task</li>
                                     <li className="flex items-start gap-2"><span className="text-[var(--color-text-muted)] mt-0.5">•</span> Your data type and approximate volume</li>
-                                    <li className="flex items-start gap-2"><span className="text-[var(--color-text-muted)] mt-0.5">•</span> Your labeling platform or dashboard</li>
+                                    <li className="flex items-start gap-2"><span className="text-[var(--color-text-muted)] mt-0.5">•</span> Your annotation platform or tool — or we can advise on setup if you do not have one yet</li>
                                     <li className="flex items-start gap-2"><span className="text-[var(--color-text-muted)] mt-0.5">•</span> Your target quality threshold if defined</li>
                                     <li className="flex items-start gap-2"><span className="text-[var(--color-text-muted)] mt-0.5">•</span> Your timeline and urgency level</li>
                                 </ul>
@@ -150,7 +150,7 @@ export default function HowItWorksPage() {
                                     <li className="flex items-start gap-2"><span className="text-[var(--color-accent-cta)] mt-0.5">→</span> A scoping proposal with recommended approach</li>
                                     <li className="flex items-start gap-2"><span className="text-[var(--color-accent-cta)] mt-0.5">→</span> Estimated Average Handling Time per item</li>
                                     <li className="flex items-start gap-2"><span className="text-[var(--color-accent-cta)] mt-0.5">→</span> Recommended IAA threshold for your task</li>
-                                    <li className="flex items-start gap-2"><span className="text-[var(--color-accent-cta)] mt-0.5">→</span> Engagement model recommendation (Pilot → Hourly → FTE → Pod)</li>
+                                    <li className="flex items-start gap-2"><span className="text-[var(--color-accent-cta)] mt-0.5">→</span> Recommended engagement model based on your dataset size and timeline</li>
                                     <li className="flex items-start gap-2"><span className="text-[var(--color-accent-cta)] mt-0.5">→</span> Draft SOW for review</li>
                                 </ul>
                             </div>
@@ -190,9 +190,9 @@ export default function HowItWorksPage() {
                             <div className="mb-10 relative">
                                 <div className="absolute w-3 h-3 rounded-full bg-[var(--color-accent-cta)] -ml-[1.875rem] mt-1 shrink-0" />
                                 <span className="text-xs uppercase tracking-widest font-mono text-[var(--color-text-muted)] font-semibold block">After Discovery Call</span>
-                                <h3 className="text-base font-semibold text-[var(--color-text-primary)] mt-2">DPA + EU Standard Contractual Clauses</h3>
+                                <h3 className="text-base font-semibold text-[var(--color-text-primary)] mt-2">DPA + Data Processing Agreement</h3>
                                 <p className="text-sm text-[var(--color-text-secondary)] mt-2 leading-relaxed">
-                                    GDPR Article 28 Data Processing Agreement with EU SCCs Module 2 (Controller-to-Processor) annexed. Governs all personal data transferred from the EEA to Aeterna Data in Indonesia. Required before any project data is discussed.
+                                    A Data Processing Agreement governs how Aeterna Data processes, stores, and protects your dataset throughout the engagement. Required before any project data is discussed or shared.
                                 </p>
                                 <div className="font-mono text-xs text-[var(--color-accent-cta)] mt-2">Typically 1–2 business days</div>
                             </div>
@@ -236,7 +236,7 @@ export default function HowItWorksPage() {
                             <div className="bg-[var(--color-bg-surface)] border border-[var(--color-border)] rounded-2xl p-6 text-center">
                                 <div className="font-mono text-3xl font-bold text-[var(--color-text-primary)]">~1 week</div>
                                 <div className="text-xs uppercase tracking-widest text-[var(--color-text-muted)] mt-2 font-semibold">Duration</div>
-                                <div className="text-xs text-[var(--color-text-secondary)] mt-1">Inside your dashboard</div>
+                                <div className="text-xs text-[var(--color-text-secondary)] mt-1">In your annotation platform</div>
                             </div>
                             <div className="bg-[var(--color-bg-surface)] border border-[var(--color-border)] rounded-2xl p-6 text-center">
                                 <div className="font-mono text-3xl font-bold text-[var(--color-text-primary)]">100–500</div>
@@ -300,8 +300,8 @@ export default function HowItWorksPage() {
                                 },
                                 {
                                     icon: Shield,
-                                    title: "BYOT Always",
-                                    body: "Annotators work inside your dashboard throughout production. Your data never leaves your environment at any point."
+                                    title: "Your Platform",
+                                    body: "Annotation runs inside your annotation platform throughout production. Your data stays in your environment. We work with the tool you already use."
                                 }
                             ].map((feature, idx) => {
                                 const Icon = feature.icon;
@@ -320,7 +320,7 @@ export default function HowItWorksPage() {
                         </div>
 
                         <p className="text-sm text-[var(--color-text-muted)] text-center mt-12 max-w-2xl mx-auto leading-relaxed">
-                            Production is billed per annotator hour, fixed in the SOW. Invoices issued monthly in arrears (or in advance for FTE and Managed Pod engagements). All invoices denominated in EUR.
+                            Production is billed per annotator hour, fixed in the SOW. Invoices issued monthly in arrears (or in advance for dedicated team engagements). All invoices denominated in EUR or USD as agreed in the SOW.
                         </p>
                     </div>
                 </section>
@@ -346,43 +346,31 @@ export default function HowItWorksPage() {
                             {[
                                 {
                                     step: "Entry",
-                                    title: "On-Demand Hourly",
-                                    rate: "€22 – €55 / hr",
-                                    desc: "Flexible per-annotator-hour billing. Scale up or down each month. No headcount commitment.",
-                                    tag: "Core BYOT Model"
+                                    title: "Paid Pilot",
+                                    desc: "Flat-rate fixed scope. Proves the pipeline before any production commitment."
                                 },
                                 {
-                                    step: "Growth",
-                                    title: "Volume Discounts",
-                                    rate: "10 – 20% off",
-                                    desc: "Commit to a guaranteed monthly hour block and unlock tiered rate reductions. 100hrs+ or 300hrs+ monthly.",
-                                    tag: "Commitment Discount"
+                                    step: "Core",
+                                    title: "On-Demand Annotation",
+                                    desc: "Flexible per-project or per-hour annotation. Rates fixed in SOW before work begins."
+                                },
+                                {
+                                    step: "Volume",
+                                    title: "Volume Engagements",
+                                    desc: "Structured pricing for teams with consistent ongoing annotation needs across multiple dataset versions."
                                 },
                                 {
                                     step: "Dedicated",
-                                    title: "FTE Retainer",
-                                    rate: "€2,800 – €5,500 / mo",
-                                    desc: "A dedicated annotator reserved exclusively for your pipeline at 160hrs/month. Billed monthly in advance.",
-                                    tag: "Exclusive Capacity"
-                                },
-                                {
-                                    step: "Enterprise",
-                                    title: "Managed Pod",
-                                    rate: "€10,500 – €19,000+ / mo",
-                                    desc: "3 Annotators + 1 QA Lead as a complete autonomous unit. You receive only final validated datasets.",
-                                    tag: "Full Infrastructure"
+                                    title: "Dedicated Team",
+                                    desc: "A dedicated annotation team reserved exclusively for your pipeline. For teams that need a long-term partner."
                                 }
                             ].map((tier, idx) => (
                                 <div key={idx} className="bg-[var(--color-bg-surface)] border border-[var(--color-border)] rounded-2xl p-6 flex flex-col items-start h-full">
                                     <div className="font-mono text-xs uppercase tracking-widest text-[var(--color-text-muted)] font-semibold">{tier.step}</div>
                                     <h3 className="text-lg font-semibold text-[var(--color-text-primary)] mt-2">{tier.title}</h3>
-                                    <div className="font-mono text-sm text-[var(--color-accent-cta)] mt-1 font-medium">{tier.rate}</div>
                                     <p className="text-sm text-[var(--color-text-secondary)] mt-3 leading-relaxed flex-1">
                                         {tier.desc}
                                     </p>
-                                    <div className="text-xs border border-[var(--color-border-subtle)] text-[var(--color-text-muted)] px-3 py-1 rounded-full inline-block mt-4 font-medium">
-                                        {tier.tag}
-                                    </div>
                                 </div>
                             ))}
                         </div>
@@ -390,48 +378,23 @@ export default function HowItWorksPage() {
                 </section>
             </AnimatedSection>
 
-            {/* ── SECTION 7: The BYOT Model Explained ── */}
+            {/* ── SECTION 7: Your Platform. Your Data. ── */}
             <AnimatedSection>
                 <section className="py-20 relative w-full">
                     <div className="max-w-4xl mx-auto px-6">
                         <p className="text-xs uppercase tracking-widest text-[var(--color-text-muted)] font-semibold mb-4">
-                            BYOT Explained
+                            How We Work
                         </p>
                         <h2 className="text-3xl lg:text-4xl font-semibold text-[var(--color-text-primary)] mb-8">
-                            Why We Work Inside Your Environment.
+                            Your Platform. Your Data.
                         </h2>
                         <div className="text-[var(--color-text-secondary)] text-base leading-relaxed space-y-5 max-w-3xl mb-12">
                             <p>
-                                BYOT — Bring Your Own Tool — means our annotation workforce operates directly inside your proprietary labeling dashboard, annotation platform, or internal tool. We do not provide a platform. We do not ask you to migrate your data. We do not introduce a new tool into your stack.
+                                Aeterna Data works inside the annotation platform your team already uses. We do not ask you to migrate your data or adopt a new tool. If you do not have an annotation platform yet, we can advise on setup based on your task type and scale.
                             </p>
-                        </div>
-
-                        <div className="flex flex-col md:flex-row items-center gap-6 md:gap-4 mb-16">
-                            <div className="border-2 border-[var(--color-accent-cta)] rounded-2xl p-6 w-full md:w-5/12 text-center md:text-left">
-                                <h3 className="text-xs uppercase tracking-widest text-[var(--color-accent-cta)] font-semibold mb-4">Your Environment</h3>
-                                <ul className="text-sm text-[var(--color-text-primary)] font-medium space-y-2">
-                                    <li>Your labeling dashboard</li>
-                                    <li>Your data storage</li>
-                                    <li>Your annotation guidelines</li>
-                                    <li>Your quality settings</li>
-                                </ul>
-                            </div>
-
-                            <div className="flex flex-col items-center justify-center shrink-0">
-                                <span className="text-xs text-[var(--color-text-muted)] mb-1">Annotators access</span>
-                                <span className="hidden md:block text-[var(--color-text-muted)] select-none">←─────────→</span>
-                                <span className="md:hidden text-[var(--color-text-muted)] select-none rotate-90 my-2">←─────────→</span>
-                            </div>
-
-                            <div className="border border-[var(--color-border)] rounded-2xl p-6 w-full md:w-5/12 text-center md:text-left bg-[var(--color-bg-surface)]">
-                                <h3 className="text-xs uppercase tracking-widest text-[var(--color-text-muted)] font-semibold mb-4">What Aeterna Data Provides</h3>
-                                <ul className="text-sm text-[var(--color-text-primary)] font-medium space-y-2">
-                                    <li>NDA-bound annotators</li>
-                                    <li>IAA measurement</li>
-                                    <li>QA reporting</li>
-                                    <li>Contractual accountability</li>
-                                </ul>
-                            </div>
+                            <p>
+                                Before any data is shared, an NDA and Data Processing Agreement are signed. Your training dataset is proprietary — we treat it that way throughout the entire engagement.
+                            </p>
                         </div>
 
                         <div className="space-y-6">
@@ -448,9 +411,9 @@ export default function HowItWorksPage() {
                                 </p>
                             </div>
                             <div className="border-l-2 border-[var(--color-accent-cta)] pl-4 py-1">
-                                <h4 className="text-sm font-semibold text-[var(--color-text-primary)]">Contractual Data Protection</h4>
+                                <h4 className="text-sm font-semibold text-[var(--color-text-primary)]">Formal Legal Framework</h4>
                                 <p className="text-sm text-[var(--color-text-secondary)] mt-1 leading-relaxed">
-                                    Your data sovereignty is protected by the signed DPA and EU SCCs — not by a privacy policy on a vendor's website.
+                                    Your data is protected by a signed NDA and DPA before any project data is shared — not just by a privacy policy on a vendor website.
                                 </p>
                             </div>
                         </div>
@@ -499,7 +462,7 @@ export default function HowItWorksPage() {
                                 {
                                     icon: Shield,
                                     title: "Compliance Documentation",
-                                    body: "Signed contract stack available for your legal team's records: NDA, DPA, EU SCCs, MSA, and SOW."
+                                    body: "Signed contract stack available for your records: NDA, DPA, MSA, and SOW."
                                 },
                                 {
                                     icon: FileText,
@@ -546,7 +509,7 @@ export default function HowItWorksPage() {
                                 { phase: "First contact to discovery call", time: "Same day – 48 hours", note: "Async or video call" },
                                 { phase: "Discovery call to scoping proposal", time: "Within 48 hours", note: "Draft SOW included" },
                                 { phase: "Scoping proposal to NDA signed", time: "Same day – 2 business days", note: "Standard mutual NDA" },
-                                { phase: "NDA to DPA + EU SCCs signed", time: "1 – 3 business days", note: "Subject to legal review" },
+                                { phase: "NDA to DPA signed", time: "1 – 3 business days", note: "Subject to review" },
                                 { phase: "DPA to MSA + SOW signed", time: "1 – 3 business days", note: "At pilot agreement" },
                                 { phase: "Contracts signed to pilot start", time: "2 – 5 business days", note: "Annotator briefing and calibration" },
                                 { phase: "Pilot duration", time: "~5 – 7 business days", note: "Depends on item volume" },
@@ -598,10 +561,10 @@ export default function HowItWorksPage() {
                                 Book a Discovery Call
                             </Link>
                             <Link
-                                href="/impressum"
+                                href="/services"
                                 className="border border-[var(--color-border-subtle)] text-[var(--color-text-secondary)] px-8 py-3.5 rounded-lg hover:border-[var(--color-border-hover)] hover:text-[var(--color-text-primary)] transition-all duration-200"
                             >
-                                Read the Contract Stack
+                                See Our Services
                             </Link>
                         </div>
                     </div>
