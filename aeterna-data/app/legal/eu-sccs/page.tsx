@@ -90,23 +90,23 @@ export default function EuSccsPage() {
                     </p>
 
                     {/* Stat Strip */}
-                    <div className="flex flex-wrap justify-center items-center gap-4 mt-10 font-mono text-sm">
-                        <div className="flex flex-col items-center">
+                    <div className="grid grid-cols-2 gap-y-8 gap-x-4 sm:flex sm:flex-wrap justify-center items-center sm:gap-4 mt-10 font-mono text-sm text-center">
+                        <div className="flex flex-col items-center text-center">
                             <span className="text-[var(--color-text-primary)] font-bold">EU 2021/914</span>
                             <span className="text-[var(--color-text-muted)] text-xs uppercase tracking-widest mt-1">Legal Basis</span>
                         </div>
                         <span className="text-[var(--color-border-subtle)] hidden sm:block">|</span>
-                        <div className="flex flex-col items-center">
+                        <div className="flex flex-col items-center text-center">
                             <span className="text-[var(--color-text-primary)] font-bold">Module 2</span>
                             <span className="text-[var(--color-text-muted)] text-xs uppercase tracking-widest mt-1">Controller → Processor</span>
                         </div>
                         <span className="text-[var(--color-border-subtle)] hidden sm:block">|</span>
-                        <div className="flex flex-col items-center">
+                        <div className="flex flex-col items-center text-center">
                             <span className="text-[var(--color-text-primary)] font-bold">Day One</span>
                             <span className="text-[var(--color-text-muted)] text-xs uppercase tracking-widest mt-1">Executed Before Data Sharing</span>
                         </div>
                         <span className="text-[var(--color-border-subtle)] hidden sm:block">|</span>
-                        <div className="flex flex-col items-center">
+                        <div className="flex flex-col items-center text-center">
                             <span className="text-[var(--color-text-primary)] font-bold">Art. 46(2)c</span>
                             <span className="text-[var(--color-text-muted)] text-xs uppercase tracking-widest mt-1">GDPR Transfer Mechanism</span>
                         </div>

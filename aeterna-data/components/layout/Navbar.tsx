@@ -57,7 +57,7 @@ export default function Navbar() {
                             Request Pilot
                         </button>
                         <button
-                            className="md:hidden text-[var(--color-text-primary)] p-1 z-50"
+                            className="md:hidden text-[var(--color-text-primary)] p-2 min-w-[44px] min-h-[44px] flex items-center justify-center z-50"
                             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                             aria-label="Toggle menu"
                         >
@@ -73,7 +73,7 @@ export default function Navbar() {
                         initial={{ opacity: 0, y: -20 }}
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -20 }}
-                        className="fixed inset-0 z-40 bg-[var(--color-bg-base)] pt-20 px-6 md:hidden flex flex-col"
+                        className="fixed inset-0 z-40 bg-[var(--color-bg-base)] pt-20 px-6 md:hidden flex flex-col overflow-y-auto pb-10"
                     >
                         <nav className="flex flex-col gap-6 mt-8">
                             {NAV_LINKS.map((link) => (
@@ -81,7 +81,7 @@ export default function Navbar() {
                                     key={link.label}
                                     href={link.href}
                                     onClick={() => setMobileMenuOpen(false)}
-                                    className="text-[var(--color-text-primary)] text-xl font-semibold border-b border-[var(--color-border)] pb-4"
+                                    className="text-[var(--color-text-primary)] text-xl font-semibold border-b border-[var(--color-border)] pb-4 min-h-[44px] flex items-center"
                                 >
                                     {link.label}
                                 </a>

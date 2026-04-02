@@ -28,7 +28,7 @@ export default function StickyTableOfContents({ items }: Props) {
                     }
                 },
                 {
-                    rootMargin: '-20% 0px -70% 0px',
+                    rootMargin: '-20% 0px -40% 0px',
                     threshold: 0,
                 }
             );

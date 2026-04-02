@@ -90,23 +90,23 @@ export default function VisualRlhfPage() {
                     </p>
 
                     {/* Stat Strip */}
-                    <div className="flex flex-wrap justify-center items-center gap-4 mt-10 font-mono text-sm">
-                        <div className="flex flex-col items-center">
+                    <div className="grid grid-cols-2 gap-y-8 gap-x-4 sm:flex sm:flex-wrap justify-center items-center sm:gap-4 mt-10 font-mono text-sm text-center">
+                        <div className="flex flex-col items-center text-center">
                             <span className="text-[var(--color-text-primary)] font-bold">Pairwise + Rating</span>
                             <span className="text-[var(--color-text-muted)] text-xs uppercase tracking-widest mt-1">Task Types</span>
                         </div>
                         <span className="text-[var(--color-border-subtle)] hidden sm:block">|</span>
-                        <div className="flex flex-col items-center">
+                        <div className="flex flex-col items-center text-center">
                             <span className="text-[var(--color-text-primary)] font-bold">Rubric-Based</span>
                             <span className="text-[var(--color-text-muted)] text-xs uppercase tracking-widest mt-1">Structured Evaluation</span>
                         </div>
                         <span className="text-[var(--color-border-subtle)] hidden sm:block">|</span>
-                        <div className="flex flex-col items-center">
+                        <div className="flex flex-col items-center text-center">
                             <span className="text-[var(--color-text-primary)] font-bold">κ ≥ 0.80</span>
                             <span className="text-[var(--color-text-muted)] text-xs uppercase tracking-widest mt-1">IAA Standard</span>
                         </div>
                         <span className="text-[var(--color-border-subtle)] hidden sm:block">|</span>
-                        <div className="flex flex-col items-center">
+                        <div className="flex flex-col items-center text-center">
                             <span className="text-[var(--color-text-primary)] font-bold">Flat Rate</span>
                             <span className="text-[var(--color-text-muted)] text-xs uppercase tracking-widest mt-1">Pilot Entry</span>
                         </div>

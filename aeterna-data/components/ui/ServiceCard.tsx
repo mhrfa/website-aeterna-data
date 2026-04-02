@@ -20,7 +20,7 @@ export default function ServiceCard({
         <motion.div
             whileHover={{ scale: 1.01 }}
             transition={{ duration: 0.2, ease: "easeOut" }}
-            className="group relative bg-[var(--color-bg-surface)] border border-[var(--color-border)] rounded-2xl p-8 flex flex-col h-full hover:bg-[var(--color-bg-elevated)] hover:border-[var(--color-border-hover)] transition-all overflow-hidden"
+            className="group relative bg-[var(--color-bg-surface)] border border-[var(--color-border)] rounded-2xl p-6 md:p-8 flex flex-col h-full hover:bg-[var(--color-bg-elevated)] hover:border-[var(--color-border-hover)] transition-all overflow-hidden"
         >
             <div className="mb-6">
                 {icon}
