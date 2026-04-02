@@ -6,7 +6,7 @@ import StickyTableOfContents from '@/components/ui/StickyTableOfContents';
 
 export const metadata: Metadata = {
     title: 'Data Security Policy — Aeterna Data',
-    description: 'Aeterna Data\'s data security policy documents the technical and organisational measures applied to protect client data throughout every annotation engagement. GDPR Article 32 compliant. BYOT model. Per-annotator access controls. 72-hour breach notification.',
+    description: 'Aeterna Data\'s data security policy documents the technical and organisational measures applied to protect client data throughout every annotation engagement. GDPR Article 32 compliant. Per-annotator access controls. 72-hour breach notification.',
     robots: {
         index: true,
         follow: true,
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 const tocItems = [
     { id: 'policy-scope', label: 'Policy Scope' },
     { id: 'gdpr-article-32', label: 'GDPR Article 32' },
-    { id: 'byot-security', label: 'BYOT Security Model' },
+    { id: 'byot-security', label: 'Data Residency Model' },
     { id: 'access-controls', label: 'Access Controls' },
     { id: 'annotator-obligations', label: 'Annotator Obligations' },
     { id: 'data-in-transit', label: 'Data in Transit' },
@@ -88,7 +88,7 @@ export default function DataSecurityPolicyPage() {
 
                     {/* Subheadline */}
                     <p className="text-[var(--color-text-secondary)] text-lg lg:text-xl max-w-2xl mx-auto mt-6">
-                        The technical and organisational measures Aeterna Data applies to protect client data throughout every annotation engagement. Documented in compliance with GDPR Article 32, EU SCCs Annex II, and EU AI Act Article 10.
+                        The technical and organisational measures Aeterna Data applies to protect client data throughout every annotation engagement. Documented in compliance with GDPR Article 32 and EU AI Act Article 10.
                     </p>
 
                     {/* Stat Strip */}
@@ -104,7 +104,7 @@ export default function DataSecurityPolicyPage() {
                         </div>
                         <span className="text-[var(--color-border-subtle)] hidden sm:block">|</span>
                         <div className="flex flex-col items-center">
-                            <span className="text-[var(--color-text-primary)] font-bold">BYOT</span>
+                            <span className="text-[var(--color-text-primary)] font-bold">Client Env</span>
                             <span className="text-[var(--color-text-muted)] text-xs uppercase tracking-widest mt-1">Data Never Leaves Client Env</span>
                         </div>
                         <span className="text-[var(--color-border-subtle)] hidden sm:block">|</span>
@@ -135,7 +135,7 @@ export default function DataSecurityPolicyPage() {
                             </h2>
                             <div className="text-base leading-relaxed text-[var(--color-text-secondary)] space-y-4">
                                 <p>
-                                    This Data Security Policy describes the technical and organisational security measures (TOMs) that PT Aeterna Data Intentio Logic (Aeterna Data) applies to the protection of client data throughout every annotation engagement. It applies to all processing activities performed by Aeterna Data as a data processor on behalf of EU-based clients under a signed Data Processing Agreement and EU Standard Contractual Clauses Module 2.
+                                    This Data Security Policy describes the technical and organisational security measures (TOMs) that PT Aeterna Data Intentio Logic (Aeterna Data) applies to the protection of client data throughout every annotation engagement. It applies to all processing activities performed by Aeterna Data as a data processor on behalf of clients under a signed Data Processing Agreement.
                                 </p>
                                 <p>
                                     This policy is provided to clients as part of the DPA review process and constitutes the Annex II Technical and Organisational Measures documentation required under the EU SCCs Module 2. It is reviewed and updated at minimum annually, or following any material change to Aeterna Data's processing infrastructure or annotator management practices.
@@ -153,7 +153,7 @@ export default function DataSecurityPolicyPage() {
                                         </div>
                                         <div>
                                             <div className="text-xs uppercase tracking-widest text-[var(--color-text-muted)]">Legal basis for policy</div>
-                                            <div className="text-sm font-semibold font-mono text-[var(--color-text-primary)] mt-1">GDPR Article 32 + EU SCCs Annex II</div>
+                                            <div className="text-sm font-semibold font-mono text-[var(--color-text-primary)] mt-1">GDPR Article 32</div>
                                         </div>
                                         <div>
                                             <div className="text-xs uppercase tracking-widest text-[var(--color-text-muted)]">Policy version</div>
@@ -185,9 +185,9 @@ export default function DataSecurityPolicyPage() {
 
                             <div className="space-y-0">
                                 {[
-                                    { title: "Confidentiality", body: "Technical and organisational measures to ensure that personal data is accessible only to authorised persons — implemented through per-annotator access controls, individual NDAs, and the BYOT model's inherent data residency properties." },
+                                    { title: "Confidentiality", body: "Technical and organisational measures to ensure that personal data is accessible only to authorised persons — implemented through per-annotator access controls, individual NDAs, and the data residency model's inherent security properties." },
                                     { title: "Integrity", body: "Measures to ensure that personal data is not altered or corrupted during annotation processing. Aeterna Data's annotators work in read-annotate mode — they add annotations but do not modify or delete source data." },
-                                    { title: "Availability", body: "Measures to ensure ongoing availability of processing systems. Aeterna Data's BYOT model means client platform availability is the client's responsibility — Aeterna Data's availability obligation is annotator capacity, not platform uptime." },
+                                    { title: "Availability", body: "Measures to ensure ongoing availability of processing systems. Aeterna Data's annotation model means client platform availability is the client's responsibility — Aeterna Data's availability obligation is annotator capacity, not platform uptime." },
                                     { title: "Resilience", body: "The ability to restore access in the event of an incident. Aeterna Data's annotation workflow does not depend on Aeterna Data-hosted infrastructure — resilience is provided by the client's own platform architecture." }
                                 ].map((item, idx) => (
                                     <AnimatedSection key={idx} delay={idx * 0.06}>
@@ -205,19 +205,19 @@ export default function DataSecurityPolicyPage() {
                     <AnimatedSection>
                         <section id="byot-security">
                             <h2 className="text-3xl lg:text-4xl font-bold tracking-tight text-[var(--color-text-primary)] mb-6">
-                                The BYOT Security Model
+                                Data Residency Security Model
                             </h2>
                             <div className="text-base leading-relaxed text-[var(--color-text-secondary)] space-y-4 mb-8">
                                 <p>
-                                    The Bring Your Own Tool model is Aeterna Data's most significant structural security measure. By operating inside the client's own annotation environment — rather than asking clients to transfer data to an Aeterna Data-managed platform — the BYOT model ensures that client data never leaves the client's own infrastructure at any point during the annotation engagement.
+                                    Aeterna Data's primary structural security measure is that annotation work is performed inside the client's own annotation environment. Rather than asking clients to transfer data to an Aeterna Data-managed platform, annotators access the client's existing annotation tool directly. Client data never leaves the client's own infrastructure at any point during the engagement.
                                 </p>
                                 <p>
-                                    The security implications of BYOT are substantial. The client's platform inherits all security controls that the client has already implemented — encryption at rest, network access controls, audit logging, multi-factor authentication, and platform-level data governance. Aeterna Data's annotators operate within those controls as authorised users — not as external parties receiving data exports.
+                                    The security implications of this approach are substantial. The client's platform inherits all security controls that the client has already implemented — encryption at rest, network access controls, audit logging, multi-factor authentication, and platform-level data governance. Aeterna Data's annotators operate within those controls as authorised users — not as external parties receiving data exports.
                                 </p>
                             </div>
 
                             <h3 className="text-xl font-semibold text-[var(--color-text-primary)] mt-8 mb-4">
-                                What BYOT Means for Data Flows
+                                Standard Vendor vs Aeterna Data Approach
                             </h3>
 
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -238,7 +238,7 @@ export default function DataSecurityPolicyPage() {
                                 </AnimatedSection>
                                 <AnimatedSection delay={0.16} className="h-full">
                                     <div className="bg-[var(--color-bg-surface)] border border-[var(--color-border)] rounded-2xl p-6 border-l-4 border-l-[var(--color-accent-cta)] h-full flex flex-col">
-                                        <h4 className="text-base font-semibold text-[var(--color-text-primary)]">Aeterna Data BYOT Model</h4>
+                                        <h4 className="text-base font-semibold text-[var(--color-text-primary)]">Aeterna Data Approach</h4>
                                         <ul className="text-xs font-mono text-[var(--color-text-muted)] space-y-1 my-3 flex-grow">
                                             <li>→ Client data stays in client platform</li>
                                             <li>→ Aeterna Data annotators access client platform via provisioned credentials</li>
@@ -338,7 +338,7 @@ export default function DataSecurityPolicyPage() {
                             </h2>
                             <div className="text-base leading-relaxed text-[var(--color-text-secondary)] space-y-4 mb-8">
                                 <p>
-                                    In the BYOT model, the primary data in transit concern is the communication between annotators' devices and the client platform. Personal data is transmitted over this channel every time an annotator loads a task item, views data in the annotation interface, or saves an annotation.
+                                    The primary data in transit concern is the communication between annotators' devices and the client annotation platform. Personal data is transmitted over this channel every time an annotator loads a task item, views data in the annotation interface, or saves an annotation.
                                 </p>
                                 <p>
                                     Aeterna Data requires that client platforms accessed by annotators are served over HTTPS — TLS-encrypted connections — as a condition of engagement. Annotation work on platforms served over unencrypted HTTP connections is not permitted. Where Aeterna Data cannot verify that a client platform is served over HTTPS, this is raised during scoping before any annotator is assigned.
@@ -375,7 +375,7 @@ export default function DataSecurityPolicyPage() {
                             </h2>
                             <div className="text-base leading-relaxed text-[var(--color-text-secondary)] space-y-4 mb-8">
                                 <p>
-                                    In the BYOT model, client data at rest resides in the client's own platform and storage infrastructure — not in Aeterna Data's infrastructure. Aeterna Data does not maintain servers, databases, or cloud storage that contain client data at rest. This means the security of client data at rest is determined by the client's own platform security — not by Aeterna Data's infrastructure security.
+                                    Client data at rest resides in the client's own platform and storage infrastructure — not in Aeterna Data's infrastructure. Aeterna Data does not maintain servers, databases, or cloud storage that contain client data at rest. This means the security of client data at rest is determined by the client's own platform security — not by Aeterna Data's infrastructure security.
                                 </p>
                                 <p>
                                     The data at rest security obligations that apply to Aeterna Data concern the annotation output and any project-related documentation that Aeterna Data creates during the engagement — quality reports, IAA scores, annotator calibration records, and SOW documentation. These documents may reference client data characteristics but do not contain copies of client data.
@@ -476,7 +476,7 @@ export default function DataSecurityPolicyPage() {
                                     Upon engagement end — whether at the natural conclusion of the project, at the client's request, or following early termination — Aeterna Data takes immediate steps to ensure that no client data is retained in any Aeterna Data system or annotator device.
                                 </p>
                                 <p>
-                                    In the BYOT model, Aeterna Data does not hold copies of client data in its own infrastructure. The primary deletion obligation at engagement end is therefore annotator-side: confirming that no annotator has retained any data item, screenshot, or extract from the client platform on a personal device.
+                                    Aeterna Data does not hold copies of client data in its own infrastructure. The primary deletion obligation at engagement end is therefore annotator-side: confirming that no annotator has retained any data item, screenshot, or extract from the client platform on a personal device.
                                 </p>
                             </div>
 
@@ -547,7 +547,7 @@ export default function DataSecurityPolicyPage() {
                                     Aeterna Data operates as a remote-first organisation. Annotators and project personnel work from their own locations rather than a shared office facility. Physical security measures therefore apply to individual work environments rather than a central premises.
                                 </p>
                                 <p>
-                                    This model — consistent with the BYOT model's remote-native design — requires specific personal device and workspace security standards rather than building-level access controls.
+                                    This remote-first model — requires specific personal device and workspace security standards rather than building-level access controls.
                                 </p>
                             </div>
 
@@ -642,7 +642,7 @@ export default function DataSecurityPolicyPage() {
                                 <div className="bg-[rgba(74,124,255,0.08)] border border-[rgba(74,124,255,0.20)] rounded-xl p-5 mt-6 relative overflow-hidden" role="note" aria-label="EU AI Act deadline notice">
                                     <div className="absolute top-0 right-0 w-32 h-32 bg-[var(--color-accent-cta)] opacity-10 rounded-full blur-2xl -mr-16 -mt-16 pointer-events-none" />
                                     <p className="text-sm text-[var(--color-text-primary)] leading-relaxed font-medium relative z-10">
-                                        EU AI Act high-risk system requirements take full effect August 2, 2026. Establishing a compliant annotation processor relationship — with signed DPA, EU SCCs, and documented security policy — before Q2 2026 ensures your annotation pipeline is EU AI Act audit-ready before the deadline.
+                                        EU AI Act high-risk system requirements take full effect August 2, 2026. Establishing a documented annotation processor relationship — with signed DPA and security policy in place — ensures your annotation pipeline is audit-ready before the deadline.
                                     </p>
                                 </div>
                             </AnimatedSection>
@@ -657,7 +657,7 @@ export default function DataSecurityPolicyPage() {
                             </h2>
                             <div className="text-base leading-relaxed text-[var(--color-text-secondary)] space-y-4 mb-8">
                                 <p>
-                                    Data security in the BYOT model is a shared responsibility. Aeterna Data is responsible for the measures described in this policy — but the security of the client's own platform, the configuration of access controls within that platform, and the security of the client's data infrastructure are the client's responsibility.
+                                    Data security is a shared responsibility. Aeterna Data is responsible for the measures described in this policy — but the security of the client's own platform, the configuration of access controls within that platform, and the security of the client's data infrastructure are the client's responsibility.
                                 </p>
                                 <p>
                                     This division of responsibility is consistent with the GDPR controller-processor model: the client (as data controller) is responsible for the security of the processing system; Aeterna Data (as data processor) is responsible for the security of its own personnel and processes within that system.
@@ -697,7 +697,7 @@ export default function DataSecurityPolicyPage() {
                                 {[
                                     {
                                         question: "Does Aeterna Data store any client data on its own servers?",
-                                        answer: "No. In the BYOT model, Aeterna Data does not maintain servers, databases, or cloud storage for client annotation data. All annotation work is performed inside client-owned or client-licensed platforms. Aeterna Data has no copy of client data at any point during the engagement."
+                                        answer: "No. Aeterna Data does not maintain servers, databases, or cloud storage for client annotation data. All annotation work is performed inside client-owned or client-licensed platforms. Aeterna Data has no copy of client data at any point during the engagement."
                                     },
                                     {
                                         question: "What happens to client data on annotator devices?",
