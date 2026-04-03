@@ -6,7 +6,7 @@ export const SITE_META = {
         "Specialized image annotation and visual RLHF evaluation for AI startups and research labs. IAA-measured (Cohen's κ ≥ 0.80 / Fleiss' κ ≥ 0.75). Structured workflows. Consistent quality.",
     companyName: "PT Aeterna Data Intentio Logic",
     brandName: "Aeterna.Data",
-    email: "hello@aeternadata.com",
+    email: "contact@aeternadata.com",
 };
 
 export const NAV_LINKS = [

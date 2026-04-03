@@ -396,7 +396,7 @@ export default function BoundingBoxPage() {
                                     {
                                         badge: "Step 01",
                                         title: "Send a Project Brief",
-                                        body: "Share your dataset sample, object classes, approximate image count, and output format. Use the contact form or email hello@aeternadata.com.",
+                                        body: "Share your dataset sample, object classes, approximate image count, and output format. Use the contact form or email contact@aeternadata.com.",
                                         ctaStr: "Send Brief",
                                         ctaHref: "/contact"
                                     },

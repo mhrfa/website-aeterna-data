@@ -49,7 +49,7 @@ export default function ContactForm() {
 
             setIsSubmitted(true);
         } catch {
-            setError('Network error. Please try again or email us directly at hello@aeternadata.com');
+            setError('Network error. Please try again or email us directly at contact@aeternadata.com');
         } finally {
             setIsLoading(false);
         }
@@ -72,8 +72,8 @@ export default function ContactForm() {
                 </p>
                 <p className="text-[var(--color-text-secondary)] mt-4 leading-relaxed">
                     If your enquiry is time-sensitive, you can also reach us directly at:{' '}
-                    <a href="mailto:hello@aeternadata.com" className="text-[var(--color-accent-cta)] hover:underline">
-                        hello@aeternadata.com
+                    <a href="mailto:contact@aeternadata.com" className="text-[var(--color-accent-cta)] hover:underline">
+                        contact@aeternadata.com
                     </a>
                 </p>
                 <p className="text-sm text-[var(--color-text-muted)] mt-6">

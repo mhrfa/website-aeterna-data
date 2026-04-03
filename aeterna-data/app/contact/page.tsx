@@ -104,8 +104,8 @@ export default function ContactPage() {
                             <div className="flex items-start gap-3 py-3 border-b border-[var(--color-border)]">
                                 <Mail className="w-4 h-4 text-[var(--color-text-muted)] shrink-0 mt-0.5" aria-hidden="true" />
                                 <span className="text-xs text-[var(--color-text-muted)] uppercase tracking-widest w-20 shrink-0 mt-0.5">General</span>
-                                <a href="mailto:hello@aeternadata.com" className="text-sm text-[var(--color-text-primary)] hover:text-[var(--color-accent-cta)] transition-colors break-all">
-                                    hello@aeternadata.com
+                                <a href="mailto:contact@aeternadata.com" className="text-sm text-[var(--color-text-primary)] hover:text-[var(--color-accent-cta)] transition-colors break-all">
+                                    contact@aeternadata.com
                                 </a>
                             </div>
                             <div className="flex items-start gap-3 py-3 border-b border-[var(--color-border)]">

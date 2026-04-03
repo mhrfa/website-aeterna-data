@@ -70,11 +70,11 @@ export default function ImpressumPage() {
                             </div>
                             <div className="grid grid-cols-1 sm:grid-cols-[160px_1fr] gap-2">
                                 <span className="text-[var(--color-text-muted)] text-sm font-semibold uppercase tracking-wider">NIB</span>
-                                <span className="text-[var(--color-text-primary)] font-mono text-sm">___________________________ [PLACEHOLDER]</span>
+                                <span className="text-[var(--color-text-primary)] font-mono text-sm">2801260156359</span>
                             </div>
                             <div className="grid grid-cols-1 sm:grid-cols-[160px_1fr] gap-2">
                                 <span className="text-[var(--color-text-muted)] text-sm font-semibold uppercase tracking-wider">NPWP</span>
-                                <span className="text-[var(--color-text-primary)] font-mono text-sm">___________________________ [PLACEHOLDER]</span>
+                                <span className="text-[var(--color-text-primary)] font-mono text-sm">1000000007725918</span>
                             </div>
                         </div>
                     </div>
@@ -86,9 +86,7 @@ export default function ImpressumPage() {
                         </h2>
                         <div className="bg-[var(--color-bg-surface)] border border-[var(--color-border)] rounded-2xl p-6 md:p-8">
                             <address className="not-italic text-[var(--color-text-secondary)] leading-relaxed space-y-1">
-                                <p className="text-[var(--color-text-primary)] font-mono text-sm">Jl. ___________________________ [PLACEHOLDER]</p>
-                                <p className="text-[var(--color-text-primary)] font-mono text-sm">___________________________, [City] [PLACEHOLDER]</p>
-                                <p className="text-[var(--color-text-primary)] font-mono text-sm">[Province], Indonesia ___________________________ [PLACEHOLDER]</p>
+                                <p className="text-[var(--color-text-primary)] font-mono text-sm">Komp. Perumahan Staf/Pengajar POLMAN, Bandung, West Java, Indonesia - 40132</p>
                             </address>
                         </div>
                     </div>
@@ -101,8 +99,8 @@ export default function ImpressumPage() {
                         <div className="bg-[var(--color-bg-surface)] border border-[var(--color-border)] rounded-2xl p-6 md:p-8 space-y-4">
                             <div className="grid grid-cols-1 sm:grid-cols-[160px_1fr] gap-2">
                                 <span className="text-[var(--color-text-muted)] text-sm font-semibold uppercase tracking-wider">General</span>
-                                <a href="mailto:hello@aeternadata.com" className="text-[var(--color-text-primary)] hover:underline transition-colors">
-                                    hello@aeternadata.com
+                                <a href="mailto:contact@aeternadata.com" className="text-[var(--color-text-primary)] hover:underline transition-colors">
+                                    contact@aeternadata.com
                                 </a>
                             </div>
                             <div className="grid grid-cols-1 sm:grid-cols-[160px_1fr] gap-2">
@@ -124,8 +122,8 @@ export default function ImpressumPage() {
                             Responsible for Content
                         </h2>
                         <div className="bg-[var(--color-bg-surface)] border border-[var(--color-border)] rounded-2xl p-6 md:p-8">
-                            <p className="text-[var(--color-text-primary)] font-mono text-sm mb-1">[Director Full Name] [PLACEHOLDER — fill before launch]</p>
-                            <p className="text-[var(--color-text-secondary)]">Director, PT Aeterna Data Intentio Logic</p>
+                            <p className="text-[var(--color-text-primary)] font-mono text-sm mb-1">Muhammad Rifqi Fauzan Arifin</p>
+                            <p className="text-[var(--color-text-secondary)]">Founder & Director, PT Aeterna Data Intentio Logic</p>
                         </div>
                     </div>
 

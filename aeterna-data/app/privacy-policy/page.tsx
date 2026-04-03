@@ -72,12 +72,12 @@ export default function PrivacyPolicyPage() {
                                 {/* TODO: Replace with registered address before launch */}
                                 <div className="grid grid-cols-1 sm:grid-cols-[160px_1fr] gap-2">
                                     <span className="text-[var(--color-text-muted)] text-sm font-semibold uppercase tracking-wider">Address</span>
-                                    <span className="text-[var(--color-text-primary)] font-mono text-sm">[PLACEHOLDER — fill before launch]</span>
+                                    <span className="text-[var(--color-text-primary)] font-mono text-sm">Komp. Perumahan Staf/Pengajar POLMAN, Bandung, West Java, Indonesia - 40132</span>
                                 </div>
                                 <div className="grid grid-cols-1 sm:grid-cols-[160px_1fr] gap-2">
                                     <span className="text-[var(--color-text-muted)] text-sm font-semibold uppercase tracking-wider">Email</span>
-                                    <a href="mailto:hello@aeternadata.com" className="text-[var(--color-text-primary)] hover:underline transition-colors">
-                                        hello@aeternadata.com
+                                    <a href="mailto:contact@aeternadata.com" className="text-[var(--color-text-primary)] hover:underline transition-colors">
+                                        contact@aeternadata.com
                                     </a>
                                 </div>
                                 <div className="grid grid-cols-1 sm:grid-cols-[160px_1fr] gap-2">

@@ -211,7 +211,7 @@ export default function AboutPage() {
                             {/* LEFT COLUMN — Founder details */}
                             <div>
                                 <div className="bg-[var(--color-bg-surface)] border border-[var(--color-border)] rounded-2xl p-8">
-                                    <h3 className="text-2xl font-bold text-[var(--color-text-primary)]">Aeterna</h3>
+                                    <h3 className="text-2xl font-bold text-[var(--color-text-primary)]">Muhammad Rifqi Fauzan Arifin</h3>
                                     <p className="text-sm text-[var(--color-text-muted)] mt-1">Founder & Director<br />PT Aeterna Data Intentio Logic</p>
 
 

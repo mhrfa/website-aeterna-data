@@ -382,7 +382,7 @@ export default function SegmentationPage() {
                                     {
                                         badge: "Step 01",
                                         title: "Send a Project Brief",
-                                        body: "Share your dataset sample, object classes requiring segmentation, semantic or instance type, and approximate image count. Use the contact form or email hello@aeternadata.com.",
+                                        body: "Share your dataset sample, object classes requiring segmentation, semantic or instance type, and approximate image count. Use the contact form or email contact@aeternadata.com.",
                                         ctaStr: "Send Brief",
                                         ctaHref: "/contact"
                                     },

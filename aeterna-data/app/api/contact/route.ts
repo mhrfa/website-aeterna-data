@@ -77,7 +77,7 @@ export async function POST(req: Request) {
         const resend = new Resend(process.env.RESEND_API_KEY);
         await resend.emails.send({
             from: 'Contact Form <contact@yourdomain.com>',
-            to: ['hello@aeternadata.com'],
+            to: ['contact@aeternadata.com'],
             subject: `New Enquiry: ${enquiryType} from ${company}`,
             html: html,
         });
@@ -86,6 +86,6 @@ export async function POST(req: Request) {
         return NextResponse.json({ success: true });
     } catch (error) {
         console.error('Contact Form Error:', error);
-        return NextResponse.json({ error: 'Network error. Please try again or email us directly at hello@aeternadata.com' }, { status: 500 });
+        return NextResponse.json({ error: 'Network error. Please try again or email us directly at contact@aeternadata.com' }, { status: 500 });
     }
 }
