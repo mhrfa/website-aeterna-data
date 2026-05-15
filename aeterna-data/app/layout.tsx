@@ -44,6 +44,9 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en" className={`dark scroll-smooth ${geist.variable} ${geistMono.variable}`}>
+            <head>
+                <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+            </head>
             <body className="antialiased">
                 <Navbar />
                 {children}
