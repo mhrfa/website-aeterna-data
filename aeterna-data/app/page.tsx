@@ -47,7 +47,7 @@ const websiteSchema = JSON.stringify({
 
 export default function Home() {
     return (
-        <>
+        <main className="min-h-screen flex flex-col relative w-full overflow-hidden">
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: organizationSchema }}
@@ -56,14 +56,12 @@ export default function Home() {
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: websiteSchema }}
             />
-            <main className="min-h-screen flex flex-col relative w-full overflow-hidden">
-                <Hero />
-                <Services />
-                <Compliance />
-                <Journey />
-                <CTABanner />
-                <BookingModal />
-            </main>
-        </>
+            <Hero />
+            <Services />
+            <Compliance />
+            <Journey />
+            <CTABanner />
+            <BookingModal />
+        </main>
     );
 }

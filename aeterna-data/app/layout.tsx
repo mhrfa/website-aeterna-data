@@ -55,43 +55,6 @@ export default function RootLayout({
         <html lang="en" className={`dark scroll-smooth ${geist.variable} ${geistMono.variable}`}>
             <head>
                 <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
-                <script
-                    type="application/ld+json"
-                    dangerouslySetInnerHTML={{
-                        __html: JSON.stringify({
-                            '@context': 'https://schema.org',
-                            '@type': 'Organization',
-                            name: 'Aeterna Data',
-                            url: 'https://aeternadata.com',
-                            logo: 'https://aeternadata.com/logo.png',
-                            description: 'Specialized image annotation for computer vision and visual RLHF teams. Cohen\'s κ ≥ 0.80 guaranteed. NDA-bound, GDPR-compliant.',
-                            serviceArea: { '@type': 'Place', name: 'Worldwide' },
-                            sameAs: ['https://www.linkedin.com/company/aeterna-data'],
-                            hasOfferCatalog: {
-                                '@type': 'OfferCatalog',
-                                name: 'Image Annotation Services',
-                                itemListElement: [
-                                    { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Bounding Box Annotation', url: 'https://aeternadata.com/services/bounding-box' } },
-                                    { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Image Segmentation Annotation', url: 'https://aeternadata.com/services/segmentation' } },
-                                    { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Image Classification Annotation', url: 'https://aeternadata.com/services/classification' } },
-                                    { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Visual RLHF Annotation', url: 'https://aeternadata.com/services/visual-rlhf' } },
-                                    { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Dataset QA & Validation', url: 'https://aeternadata.com/services/dataset-qa' } },
-                                ],
-                            },
-                        })
-                    }}
-                />
-                <script
-                    type="application/ld+json"
-                    dangerouslySetInnerHTML={{
-                        __html: JSON.stringify({
-                            '@context': 'https://schema.org',
-                            '@type': 'WebSite',
-                            name: 'Aeterna Data',
-                            url: 'https://aeternadata.com',
-                        })
-                    }}
-                />
             </head>
             <body className="antialiased">
                 <Navbar />
