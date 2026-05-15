@@ -1,4 +1,4 @@
-﻿import type { Metadata } from 'next';
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import { ChevronRight } from 'lucide-react';
 import AnimatedSection from '@/components/ui/AnimatedSection';
@@ -31,7 +31,7 @@ const serviceSchema = {
     '@context': 'https://schema.org',
     '@type': 'Service',
     name: 'Image Segmentation Annotation Service',
-    description: 'Semantic and instance segmentation annotation for computer vision datasets. IAA-measured quality with Cohen's κ ≥ 0.80.',
+    description: 'Semantic and instance segmentation annotation for computer vision datasets. IAA-measured quality with Cohen\'s κ ≥ 0.80.',
     provider: { '@type': 'Organization', name: 'Aeterna Data', url: 'https://aeternadata.com' },
     serviceType: 'Image Annotation',
     url: 'https://aeternadata.com/services/segmentation',

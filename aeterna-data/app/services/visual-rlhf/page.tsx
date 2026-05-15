@@ -1,4 +1,4 @@
-﻿import type { Metadata } from 'next';
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import { ChevronRight } from 'lucide-react';
 import AnimatedSection from '@/components/ui/AnimatedSection';
@@ -31,7 +31,7 @@ const serviceSchema = {
     '@context': 'https://schema.org',
     '@type': 'Service',
     name: 'Visual RLHF Annotation Service',
-    description: 'Human preference annotation for visual RLHF and reward model training. IAA-measured quality with Cohen's κ ≥ 0.80.',
+    description: 'Human preference annotation for visual RLHF and reward model training. IAA-measured quality with Cohen\'s κ ≥ 0.80.',
     provider: { '@type': 'Organization', name: 'Aeterna Data', url: 'https://aeternadata.com' },
     serviceType: 'Image Annotation',
     url: 'https://aeternadata.com/services/visual-rlhf',
