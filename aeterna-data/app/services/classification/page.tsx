@@ -1,15 +1,17 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import Link from 'next/link';
 import { ChevronRight } from 'lucide-react';
 import AnimatedSection from '@/components/ui/AnimatedSection';
 import StickyTableOfContents from '@/components/ui/StickyTableOfContents';
 
 export const metadata: Metadata = {
-    title: 'Image Classification — Aeterna Data',
-    description: 'Structured image classification annotation for computer vision datasets. Single-label and multi-label support, taxonomy validation, IAA measurement on every batch.',
-    robots: {
-        index: true,
-        follow: true,
+    title: 'Image Classification Annotation Service for Computer Vision Datasets',
+    description: 'Structured image classification annotation for computer vision and ML datasets. IAA-measured quality with Cohen\'s κ ≥ 0.80. GDPR-compliant, NDA-bound.',
+    robots: { index: true, follow: true },
+    openGraph: {
+        title: 'Image Classification Annotation Service — Aeterna Data',
+        description: 'Image classification annotation with IAA-measured quality. κ ≥ 0.80 guaranteed.',
+        url: 'https://aeternadata.com/services/classification',
     },
 };
 
@@ -39,7 +41,7 @@ export default function ClassificationPage() {
                 `
             }} />
 
-            {/* ── PAGE HERO (FULL WIDTH) ── */}
+            {/* â”€â”€ PAGE HERO (FULL WIDTH) â”€â”€ */}
             <section className="relative min-h-[45vh] flex flex-col items-center justify-center pt-32 pb-16 text-center w-full">
                 {/* Background Orb Layer */}
                 <div
@@ -102,7 +104,7 @@ export default function ClassificationPage() {
                         </div>
                         <span className="text-[var(--color-border-subtle)] hidden sm:block">|</span>
                         <div className="flex flex-col items-center text-center">
-                            <span className="text-[var(--color-text-primary)] font-bold">κ ≥ 0.80</span>
+                            <span className="text-[var(--color-text-primary)] font-bold">Îº â‰¥ 0.80</span>
                             <span className="text-[var(--color-text-muted)] text-xs uppercase tracking-widest mt-1">IAA Standard</span>
                         </div>
                         <span className="text-[var(--color-border-subtle)] hidden sm:block">|</span>
@@ -114,7 +116,7 @@ export default function ClassificationPage() {
                 </div>
             </section>
 
-            {/* ── TWO-COLUMN LAYOUT ── */}
+            {/* â”€â”€ TWO-COLUMN LAYOUT â”€â”€ */}
             <div className="max-w-7xl mx-auto px-6 lg:grid lg:grid-cols-[256px_1fr] lg:gap-16 pt-12 pb-32 w-full">
 
                 {/* LEFT SIDEBAR (Sticky TOC) */}
@@ -133,10 +135,10 @@ export default function ClassificationPage() {
                             </h2>
                             <div className="text-base leading-relaxed text-[var(--color-text-secondary)] space-y-4">
                                 <p>
-                                    Image classification is the task of assigning one or more category labels to an image from a predefined taxonomy. It is the foundation of many computer vision applications — from content moderation systems that categorise what appears in an image, to medical AI systems that classify scan types, to e-commerce systems that tag products by category.
+                                    Image classification is the task of assigning one or more category labels to an image from a predefined taxonomy. It is the foundation of many computer vision applications â€” from content moderation systems that categorise what appears in an image, to medical AI systems that classify scan types, to e-commerce systems that tag products by category.
                                 </p>
                                 <p>
-                                    The quality challenge in classification annotation is taxonomy consistency. When a category definition is ambiguous — when annotators disagree about whether an image belongs to category A or category B — the resulting labels introduce noise into the training signal. This is particularly problematic in multi-label tasks where multiple categories must be applied correctly to the same image.
+                                    The quality challenge in classification annotation is taxonomy consistency. When a category definition is ambiguous â€” when annotators disagree about whether an image belongs to category A or category B â€” the resulting labels introduce noise into the training signal. This is particularly problematic in multi-label tasks where multiple categories must be applied correctly to the same image.
                                 </p>
                                 <p>
                                     Aeterna Data addresses this through taxonomy validation during the pilot phase. Before production annotation begins, we annotate a representative sample and measure category-level IAA. Any category with low agreement is reviewed, the definition is clarified, and the guideline is updated before the full dataset is labeled.
@@ -232,7 +234,7 @@ export default function ClassificationPage() {
                             </h2>
                             <div className="text-base leading-relaxed text-[var(--color-text-secondary)] space-y-4">
                                 <p>
-                                    The most common cause of low-quality classification datasets is an ambiguous taxonomy. Category definitions that seem clear in isolation often produce disagreement when annotators encounter edge cases — images that could plausibly belong to two categories, or images that do not clearly fit any category.
+                                    The most common cause of low-quality classification datasets is an ambiguous taxonomy. Category definitions that seem clear in isolation often produce disagreement when annotators encounter edge cases â€” images that could plausibly belong to two categories, or images that do not clearly fit any category.
                                 </p>
                                 <p>
                                     Aeterna Data&apos;s pilot phase is specifically designed to surface these problems before they corrupt a full dataset. During the pilot, we annotate a sample that includes representative edge cases, measure inter-annotator agreement at the category level, and identify any category with agreement below threshold.
@@ -247,7 +249,7 @@ export default function ClassificationPage() {
                                     },
                                     {
                                         title: "Category-Level IAA Measurement",
-                                        body: "Agreement is measured per category, not just overall. A category with low IAA is flagged individually — the rest of the taxonomy proceeds to production."
+                                        body: "Agreement is measured per category, not just overall. A category with low IAA is flagged individually â€” the rest of the taxonomy proceeds to production."
                                     },
                                     {
                                         title: "Guideline Update Before Production",
@@ -273,13 +275,13 @@ export default function ClassificationPage() {
                             </h2>
                             <div className="text-base leading-relaxed text-[var(--color-text-secondary)] space-y-4">
                                 <p>
-                                    Every classification annotation batch delivered by Aeterna Data is measured for inter-annotator agreement before delivery. IAA is not a target — it is a threshold. Batches that do not meet the threshold are reworked before the client receives them.
+                                    Every classification annotation batch delivered by Aeterna Data is measured for inter-annotator agreement before delivery. IAA is not a target â€” it is a threshold. Batches that do not meet the threshold are reworked before the client receives them.
                                 </p>
 
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
                                     <div className="bg-[rgba(74,124,255,0.06)] border border-[rgba(74,124,255,0.15)] rounded-2xl p-6 flex flex-col justify-center">
                                         <div className="text-3xl font-mono font-bold text-[var(--color-accent-cta)] mb-2" style={{ textShadow: "0 0 20px rgba(74,124,255,0.4)" }}>
-                                            κ ≥ 0.80
+                                            Îº â‰¥ 0.80
                                         </div>
                                         <h3 className="text-base font-semibold text-[var(--color-text-primary)]">Cohen&apos;s Kappa</h3>
                                         <p className="text-sm text-[var(--color-text-secondary)] mt-1">
@@ -288,7 +290,7 @@ export default function ClassificationPage() {
                                     </div>
                                     <div className="bg-[rgba(20,184,166,0.06)] border border-[rgba(20,184,166,0.15)] rounded-2xl p-6 flex flex-col justify-center">
                                         <div className="text-3xl font-mono font-bold mb-2" style={{ color: "#2dd4bf", textShadow: "0 0 20px rgba(45,212,191,0.4)" }}>
-                                            κ ≥ 0.75
+                                            Îº â‰¥ 0.75
                                         </div>
                                         <h3 className="text-base font-semibold text-[var(--color-text-primary)]">Fleiss&apos; Kappa</h3>
                                         <p className="text-sm text-[var(--color-text-secondary)] mt-1">
@@ -318,7 +320,7 @@ export default function ClassificationPage() {
                                     {
                                         num: "01",
                                         title: "Project Brief & Scoping",
-                                        body: "Share your image dataset, category taxonomy, label type (single or multi-label), and any existing annotation guidelines. We scope the pilot — sample size, timeline, and deliverables — and confirm before work begins."
+                                        body: "Share your image dataset, category taxonomy, label type (single or multi-label), and any existing annotation guidelines. We scope the pilot â€” sample size, timeline, and deliverables â€” and confirm before work begins."
                                     },
                                     {
                                         num: "02",
@@ -333,7 +335,7 @@ export default function ClassificationPage() {
                                     {
                                         num: "04",
                                         title: "Delivery & Documentation",
-                                        body: "Annotated dataset delivered in your specified format with a complete quality report — IAA scores, class distribution, and annotator notes."
+                                        body: "Annotated dataset delivered in your specified format with a complete quality report â€” IAA scores, class distribution, and annotator notes."
                                     }
                                 ].map((stage, idx) => (
                                     <AnimatedSection key={idx} delay={idx * 0.06}>
@@ -397,7 +399,7 @@ export default function ClassificationPage() {
                                     {
                                         badge: "Step 02",
                                         title: "Receive a Pilot Proposal",
-                                        body: "We send a scoped pilot proposal within 48 hours — sample size, timeline, flat-rate pilot fee, and deliverables."
+                                        body: "We send a scoped pilot proposal within 48 hours â€” sample size, timeline, flat-rate pilot fee, and deliverables."
                                     },
                                     {
                                         badge: "Step 03",
@@ -440,7 +442,7 @@ export default function ClassificationPage() {
                 </div>
             </div>
 
-            {/* ── BOTTOM CTA STRIP ── */}
+            {/* â”€â”€ BOTTOM CTA STRIP â”€â”€ */}
             <AnimatedSection>
                 <section className="py-24 border-t border-[var(--color-border)] border-b relative w-full overflow-hidden bg-[var(--color-bg-base)]">
                     <div

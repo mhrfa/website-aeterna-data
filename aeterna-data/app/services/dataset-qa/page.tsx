@@ -1,15 +1,17 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import Link from 'next/link';
 import { ChevronRight } from 'lucide-react';
 import AnimatedSection from '@/components/ui/AnimatedSection';
 import StickyTableOfContents from '@/components/ui/StickyTableOfContents';
 
 export const metadata: Metadata = {
-    title: 'Dataset Validation & QA — Aeterna Data',
-    description: 'Systematic quality audit for annotated image datasets. IAA measurement, label consistency review, error pattern detection, and structured quality reporting before model training.',
-    robots: {
-        index: true,
-        follow: true,
+    title: 'Dataset QA & Validation Service for Annotated Image Datasets',
+    description: 'Systematic quality audit and validation for annotated image datasets. IAA-measured review with Cohen\'s κ ≥ 0.80. Catch label errors before they break your model.',
+    robots: { index: true, follow: true },
+    openGraph: {
+        title: 'Dataset QA & Validation Service — Aeterna Data',
+        description: 'Quality audit for annotated datasets. IAA-measured review, κ ≥ 0.80 guaranteed.',
+        url: 'https://aeternadata.com/services/dataset-qa',
     },
 };
 
@@ -39,7 +41,7 @@ export default function DatasetQaPage() {
                 `
             }} />
 
-            {/* ── PAGE HERO (FULL WIDTH) ── */}
+            {/* â”€â”€ PAGE HERO (FULL WIDTH) â”€â”€ */}
             <section className="relative min-h-[45vh] flex flex-col items-center justify-center pt-32 pb-16 text-center w-full">
                 {/* Background Orb Layer */}
                 <div
@@ -97,7 +99,7 @@ export default function DatasetQaPage() {
                         </div>
                         <span className="text-[var(--color-border-subtle)] hidden sm:block">|</span>
                         <div className="flex flex-col items-center text-center">
-                            <span className="text-[var(--color-text-primary)] font-bold">κ ≥ 0.80</span>
+                            <span className="text-[var(--color-text-primary)] font-bold">Îº â‰¥ 0.80</span>
                             <span className="text-[var(--color-text-muted)] text-xs uppercase tracking-widest mt-1">Quality Threshold</span>
                         </div>
                         <span className="text-[var(--color-border-subtle)] hidden sm:block">|</span>
@@ -114,7 +116,7 @@ export default function DatasetQaPage() {
                 </div>
             </section>
 
-            {/* ── TWO-COLUMN LAYOUT ── */}
+            {/* â”€â”€ TWO-COLUMN LAYOUT â”€â”€ */}
             <div className="max-w-7xl mx-auto px-6 lg:grid lg:grid-cols-[256px_1fr] lg:gap-16 pt-12 pb-32 w-full">
 
                 {/* LEFT SIDEBAR (Sticky TOC) */}
@@ -133,10 +135,10 @@ export default function DatasetQaPage() {
                             </h2>
                             <div className="text-base leading-relaxed text-[var(--color-text-secondary)] space-y-4">
                                 <p>
-                                    Dataset validation is the systematic review of an annotated dataset before it is used for model training. It audits the dataset for label consistency errors, class distribution issues, systematic annotation mistakes, and guideline violations — and produces a structured report with specific findings and reannotation recommendations.
+                                    Dataset validation is the systematic review of an annotated dataset before it is used for model training. It audits the dataset for label consistency errors, class distribution issues, systematic annotation mistakes, and guideline violations â€” and produces a structured report with specific findings and reannotation recommendations.
                                 </p>
                                 <p>
-                                    Annotation errors are significantly cheaper to fix before training than after. A model trained on a corrupted dataset must be retrained from scratch once the errors are discovered — which may only happen after a failed evaluation or a production incident. Dataset validation catches these problems at the source.
+                                    Annotation errors are significantly cheaper to fix before training than after. A model trained on a corrupted dataset must be retrained from scratch once the errors are discovered â€” which may only happen after a failed evaluation or a production incident. Dataset validation catches these problems at the source.
                                 </p>
                                 <p>
                                     Aeterna Data&apos;s validation service measures inter-annotator agreement on existing datasets, identifies error patterns by class and by annotator, and delivers a structured quality report with specific reannotation recommendations. The report tells you exactly what is wrong, where it is, and how to fix it.
@@ -205,19 +207,19 @@ export default function DatasetQaPage() {
                                     },
                                     {
                                         title: "Class Distribution",
-                                        body: "Whether the class distribution in the annotated dataset reflects the actual distribution in the source data — or whether certain classes are systematically over- or under-labeled."
+                                        body: "Whether the class distribution in the annotated dataset reflects the actual distribution in the source data â€” or whether certain classes are systematically over- or under-labeled."
                                     },
                                     {
                                         title: "Systematic Annotator Errors",
-                                        body: "Whether specific annotators are producing errors at a higher rate than others, and whether those errors follow a pattern — for example, consistently mislabeling a specific class or consistently drawing boundaries too loosely."
+                                        body: "Whether specific annotators are producing errors at a higher rate than others, and whether those errors follow a pattern â€” for example, consistently mislabeling a specific class or consistently drawing boundaries too loosely."
                                     },
                                     {
                                         title: "Guideline Violations",
-                                        body: "Whether annotations violate the stated annotation guidelines — for example, annotating objects that should be skipped, or missing attributes that are required by the guidelines."
+                                        body: "Whether annotations violate the stated annotation guidelines â€” for example, annotating objects that should be skipped, or missing attributes that are required by the guidelines."
                                     },
                                     {
                                         title: "Edge Case Coverage",
-                                        body: "Whether the dataset adequately represents the edge cases the model will encounter in deployment — and whether those edge cases are correctly annotated."
+                                        body: "Whether the dataset adequately represents the edge cases the model will encounter in deployment â€” and whether those edge cases are correctly annotated."
                                     }
                                 ].map((item, idx) => (
                                     <div key={idx} className="border-l-2 border-[var(--color-border)] pl-5 py-2 mb-6">
@@ -242,7 +244,7 @@ export default function DatasetQaPage() {
                                     Inter-annotator agreement measurement on an existing dataset works by having a second annotator label a sample of the data independently, then comparing the two sets of labels using Cohen&apos;s Kappa (for pairwise comparison) or Fleiss&apos; Kappa (for multi-annotator comparison).
                                 </p>
                                 <p>
-                                    The IAA score tells you how consistent the original annotation is — not just overall, but by class and by annotator. A dataset might have high overall IAA but low IAA on a specific class that is critical to model performance. That class-level measurement is what drives the reannotation recommendation.
+                                    The IAA score tells you how consistent the original annotation is â€” not just overall, but by class and by annotator. A dataset might have high overall IAA but low IAA on a specific class that is critical to model performance. That class-level measurement is what drives the reannotation recommendation.
                                 </p>
                             </div>
 
@@ -251,16 +253,16 @@ export default function DatasetQaPage() {
                                 <table className="w-full text-sm">
                                     <thead>
                                         <tr className="bg-[var(--color-bg-elevated)]">
-                                            <th className="text-left px-6 py-4 font-semibold text-[var(--color-text-primary)] border-b border-[var(--color-border)]">κ Score</th>
+                                            <th className="text-left px-6 py-4 font-semibold text-[var(--color-text-primary)] border-b border-[var(--color-border)]">Îº Score</th>
                                             <th className="text-left px-6 py-4 font-semibold text-[var(--color-text-primary)] border-b border-[var(--color-border)]">Interpretation</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         {[
-                                            { score: "κ < 0.40", interpretation: "Poor — significant errors" },
-                                            { score: "0.40 – 0.59", interpretation: "Moderate — review needed" },
-                                            { score: "0.60 – 0.79", interpretation: "Substantial — minor issues" },
-                                            { score: "κ ≥ 0.80", interpretation: "Strong — production ready" }
+                                            { score: "Îº < 0.40", interpretation: "Poor â€” significant errors" },
+                                            { score: "0.40 â€“ 0.59", interpretation: "Moderate â€” review needed" },
+                                            { score: "0.60 â€“ 0.79", interpretation: "Substantial â€” minor issues" },
+                                            { score: "Îº â‰¥ 0.80", interpretation: "Strong â€” production ready" }
                                         ].map((row, idx) => (
                                             <tr key={idx} className="border-b border-[var(--color-border)] last:border-b-0">
                                                 <td className="px-6 py-3.5 font-mono text-[var(--color-accent-cta)]">{row.score}</td>
@@ -287,11 +289,11 @@ export default function DatasetQaPage() {
                                 {[
                                     {
                                         title: "Executive Summary",
-                                        body: "Overall IAA score, total errors found, classes with quality issues, and overall reannotation recommendation — ready for technical and non-technical stakeholders."
+                                        body: "Overall IAA score, total errors found, classes with quality issues, and overall reannotation recommendation â€” ready for technical and non-technical stakeholders."
                                     },
                                     {
                                         title: "IAA Analysis by Class",
-                                        body: "Per-class Cohen's Kappa scores with interpretation, highlighting which classes are production-ready and which require reannotation."
+                                        body: "Per-class Cohen\'s Kappa scores with interpretation, highlighting which classes are production-ready and which require reannotation."
                                     },
                                     {
                                         title: "Annotator Performance Analysis",
@@ -299,11 +301,11 @@ export default function DatasetQaPage() {
                                     },
                                     {
                                         title: "Error Pattern Documentation",
-                                        body: "Specific error types found, with annotated examples — showing what the error looks like and what the correct annotation should be."
+                                        body: "Specific error types found, with annotated examples â€” showing what the error looks like and what the correct annotation should be."
                                     },
                                     {
                                         title: "Reannotation Recommendation",
-                                        body: "Specific recommendation on which images, classes, or annotator batches require reannotation — with priority ranking by impact on model performance."
+                                        body: "Specific recommendation on which images, classes, or annotator batches require reannotation â€” with priority ranking by impact on model performance."
                                     },
                                     {
                                         title: "Guideline Revision Proposal",
@@ -348,7 +350,7 @@ export default function DatasetQaPage() {
                                     {
                                         num: "04",
                                         title: "Delivery & Documentation",
-                                        body: "Annotated dataset delivered in your specified format with a complete quality report — IAA scores, class distribution, and annotator notes."
+                                        body: "Annotated dataset delivered in your specified format with a complete quality report â€” IAA scores, class distribution, and annotator notes."
                                     }
                                 ].map((stage, idx) => (
                                     <AnimatedSection key={idx} delay={idx * 0.06}>
@@ -412,7 +414,7 @@ export default function DatasetQaPage() {
                                     {
                                         badge: "Step 02",
                                         title: "Receive a Pilot Proposal",
-                                        body: "We send a scoped pilot proposal within 48 hours — sample size, timeline, flat-rate pilot fee, and deliverables."
+                                        body: "We send a scoped pilot proposal within 48 hours â€” sample size, timeline, flat-rate pilot fee, and deliverables."
                                     },
                                     {
                                         badge: "Step 03",
@@ -455,7 +457,7 @@ export default function DatasetQaPage() {
                 </div>
             </div>
 
-            {/* ── BOTTOM CTA STRIP ── */}
+            {/* â”€â”€ BOTTOM CTA STRIP â”€â”€ */}
             <AnimatedSection>
                 <section className="py-24 border-t border-[var(--color-border)] border-b relative w-full overflow-hidden bg-[var(--color-bg-base)]">
                     <div

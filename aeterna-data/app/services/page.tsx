@@ -1,14 +1,16 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import Link from 'next/link';
 import { ChevronRight, BoxSelect, Layers, Tag, GitCompare, ShieldCheck, ArrowRight, CheckCircle2 } from 'lucide-react';
 import AnimatedSection from '@/components/ui/AnimatedSection';
 
 export const metadata: Metadata = {
-    title: 'Services — Aeterna Data',
-    description: 'Five core annotation services for computer vision and visual RLHF. Bounding box, segmentation, classification, visual RLHF evaluation, and dataset QA — all measured by IAA.',
-    robots: {
-        index: true,
-        follow: true,
+    title: 'Image Annotation Services — Bounding Box, Segmentation, Visual RLHF',
+    description: 'Five IAA-measured annotation services for computer vision and visual RLHF teams. Cohen\'s κ ≥ 0.80 on every project. GDPR-compliant, NDA-bound.',
+    robots: { index: true, follow: true },
+    openGraph: {
+        title: 'Image Annotation Services — Aeterna Data',
+        description: 'Bounding box, segmentation, classification, visual RLHF, and dataset QA. κ ≥ 0.80 guaranteed.',
+        url: 'https://aeternadata.com/services',
     },
 };
 
@@ -452,7 +454,7 @@ export default function ServicesIndexPage() {
                         </div>
 
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
-                            {/* Cohen's Kappa */}
+                            {/* Cohen\'s Kappa */}
                             <div className="bg-[var(--color-bg-surface)] border border-[var(--color-border)] rounded-2xl p-8 text-center">
                                 <div className="text-4xl lg:text-5xl font-bold font-mono text-[var(--color-text-primary)] mb-3">
                                     κ ≥ 0.80

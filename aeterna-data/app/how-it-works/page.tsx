@@ -1,14 +1,16 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import Link from 'next/link';
 import { ChevronRight, BarChart2, RefreshCw, FileText, Shield, FileCheck, BarChart, Clock } from 'lucide-react';
 import AnimatedSection from '@/components/ui/AnimatedSection';
 
 export const metadata: Metadata = {
-    title: 'How It Works — Aeterna Data',
-    description: 'How Aeterna Data delivers GDPR-compliant, IAA-measured AI data annotation inside your own environment. From first contact to validated dataset delivery.',
-    robots: {
-        index: true,
-        follow: true,
+    title: 'How It Works — IAA-Measured Annotation Process',
+    description: 'How Aeterna Data delivers GDPR-compliant, IAA-measured image annotation. From scoping to delivery with Cohen\'s κ ≥ 0.80 quality gates at every stage.',
+    robots: { index: true, follow: true },
+    openGraph: {
+        title: 'How It Works — Aeterna Data',
+        description: 'GDPR-compliant annotation process with IAA quality gates. κ ≥ 0.80 at every stage.',
+        url: 'https://aeternadata.com/how-it-works',
     },
 };
 
@@ -249,7 +251,7 @@ export default function HowItWorksPage() {
                             {[
                                 "Annotators are briefed on your guidelines and calibrated on your specific task before the pilot begins. No cold starts.",
                                 "Annotation runs inside your dashboard. Your data never leaves your environment throughout the pilot.",
-                                "IAA is measured across the pilot batch. Cohen's Kappa and Fleiss' Kappa both calculated and documented.",
+                                "IAA is measured across the pilot batch. Cohen\'s Kappa and Fleiss' Kappa both calculated and documented.",
                                 "A complete quality report is delivered with the pilot: IAA scores, class distribution, annotator consistency notes, and AHT (Average Handling Time) per item type.",
                                 "You review the report and make a decision. If you proceed within 60 days, the pilot fee is credited in full to your first production invoice."
                             ].map((step, idx, arr) => (
@@ -286,7 +288,7 @@ export default function HowItWorksPage() {
                                 {
                                     icon: BarChart2,
                                     title: "IAA Every Batch",
-                                    body: "Cohen's Kappa ≥ 0.80 and Fleiss' Kappa ≥ 0.75 measured on every production batch. Not sampled. Every batch."
+                                    body: "Cohen\'s Kappa ≥ 0.80 and Fleiss' Kappa ≥ 0.75 measured on every production batch. Not sampled. Every batch."
                                 },
                                 {
                                     icon: RefreshCw,
@@ -447,7 +449,7 @@ export default function HowItWorksPage() {
                                 {
                                     icon: BarChart,
                                     title: "IAA Quality Report",
-                                    body: "Cohen's Kappa and Fleiss' Kappa scores per batch. Class distribution. Annotator consistency documentation."
+                                    body: "Cohen\'s Kappa and Fleiss' Kappa scores per batch. Class distribution. Annotator consistency documentation."
                                 },
                                 {
                                     icon: RefreshCw,

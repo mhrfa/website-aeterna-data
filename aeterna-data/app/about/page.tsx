@@ -4,11 +4,13 @@ import { ChevronRight } from 'lucide-react';
 import AnimatedSection from '@/components/ui/AnimatedSection';
 
 export const metadata: Metadata = {
-    title: 'About — Aeterna Data',
-    description: 'Aeterna Data is a specialized image annotation company focused on computer vision datasets and visual AI evaluation. Small team. Structured workflows. IAA-measured quality.',
-    robots: {
-        index: true,
-        follow: true,
+    title: 'About — Specialized Image Annotation for Computer Vision Teams',
+    description: 'Aeterna Data is a specialized image annotation company for computer vision and visual RLHF teams. IAA-measured quality, NDA-bound workforce, GDPR-compliant.',
+    robots: { index: true, follow: true },
+    openGraph: {
+        title: 'About Aeterna Data',
+        description: 'Specialized image annotation for computer vision and visual RLHF. IAA-measured quality.',
+        url: 'https://aeternadata.com/about',
     },
 };
 

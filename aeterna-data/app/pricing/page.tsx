@@ -18,11 +18,13 @@ import {
 import AnimatedSection from '@/components/ui/AnimatedSection';
 
 export const metadata: Metadata = {
-    title: 'Pricing — Aeterna Data',
-    description: 'Aeterna Data pricing is engagement-based and agreed in a signed Statement of Work before work begins. Five tiers from paid pilot to Managed Pod. Request a discovery call to discuss your project.',
-    robots: {
-        index: true,
-        follow: true,
+    title: 'Pricing — Flat-Rate Pilot & Statement of Work',
+    description: 'Aeterna Data pricing is engagement-based, agreed in a signed Statement of Work. Start with a fixed-price pilot to validate quality before scaling.',
+    robots: { index: true, follow: true },
+    openGraph: {
+        title: 'Pricing — Aeterna Data',
+        description: 'Flat-rate pilot to validate quality. Engagement-based pricing via Statement of Work.',
+        url: 'https://aeternadata.com/pricing',
     },
 };
 

@@ -1,15 +1,17 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import Link from 'next/link';
 import { ChevronRight } from 'lucide-react';
 import AnimatedSection from '@/components/ui/AnimatedSection';
 import StickyTableOfContents from '@/components/ui/StickyTableOfContents';
 
 export const metadata: Metadata = {
-    title: 'Visual RLHF Evaluation — Aeterna Data',
-    description: 'Human preference annotation for visual AI reward model training. Pairwise image ranking, quality rating, and safety classification for image generation models.',
-    robots: {
-        index: true,
-        follow: true,
+    title: 'Visual RLHF Annotation — Human Preference Data for Reward Model Training',
+    description: 'Human preference annotation for visual RLHF and reward model training. IAA-measured quality with Cohen\'s κ ≥ 0.80. The only IAA-measured visual RLHF service.',
+    robots: { index: true, follow: true },
+    openGraph: {
+        title: 'Visual RLHF Annotation Service — Aeterna Data',
+        description: 'Human preference data for visual reward model training. IAA-measured, κ ≥ 0.80 guaranteed.',
+        url: 'https://aeternadata.com/services/visual-rlhf',
     },
 };
 
@@ -39,7 +41,7 @@ export default function VisualRlhfPage() {
                 `
             }} />
 
-            {/* ── PAGE HERO (FULL WIDTH) ── */}
+            {/* â”€â”€ PAGE HERO (FULL WIDTH) â”€â”€ */}
             <section className="relative min-h-[45vh] flex flex-col items-center justify-center pt-32 pb-16 text-center w-full">
                 {/* Background Orb Layer */}
                 <div
@@ -86,7 +88,7 @@ export default function VisualRlhfPage() {
 
                     {/* Subheadline */}
                     <p className="text-[var(--color-text-secondary)] text-lg lg:text-xl max-w-2xl mt-6">
-                        Structured human preference annotation for training reward models on visual AI systems. Pairwise ranking, quality rating, and safety classification — with rubric consistency monitoring across every batch.
+                        Structured human preference annotation for training reward models on visual AI systems. Pairwise ranking, quality rating, and safety classification â€” with rubric consistency monitoring across every batch.
                     </p>
 
                     {/* Stat Strip */}
@@ -102,7 +104,7 @@ export default function VisualRlhfPage() {
                         </div>
                         <span className="text-[var(--color-border-subtle)] hidden sm:block">|</span>
                         <div className="flex flex-col items-center text-center">
-                            <span className="text-[var(--color-text-primary)] font-bold">κ ≥ 0.80</span>
+                            <span className="text-[var(--color-text-primary)] font-bold">Îº â‰¥ 0.80</span>
                             <span className="text-[var(--color-text-muted)] text-xs uppercase tracking-widest mt-1">IAA Standard</span>
                         </div>
                         <span className="text-[var(--color-border-subtle)] hidden sm:block">|</span>
@@ -114,7 +116,7 @@ export default function VisualRlhfPage() {
                 </div>
             </section>
 
-            {/* ── TWO-COLUMN LAYOUT ── */}
+            {/* â”€â”€ TWO-COLUMN LAYOUT â”€â”€ */}
             <div className="max-w-7xl mx-auto px-6 lg:grid lg:grid-cols-[256px_1fr] lg:gap-16 pt-12 pb-32 w-full">
 
                 {/* LEFT SIDEBAR (Sticky TOC) */}
@@ -133,10 +135,10 @@ export default function VisualRlhfPage() {
                             </h2>
                             <div className="text-base leading-relaxed text-[var(--color-text-secondary)] space-y-4">
                                 <p>
-                                    Reinforcement Learning from Human Feedback (RLHF) is the process of training a reward model on human preference judgments — then using that reward model to fine-tune an AI system toward outputs that humans prefer. For image generation models, this means collecting human judgments about which AI-generated images are better, and why.
+                                    Reinforcement Learning from Human Feedback (RLHF) is the process of training a reward model on human preference judgments â€” then using that reward model to fine-tune an AI system toward outputs that humans prefer. For image generation models, this means collecting human judgments about which AI-generated images are better, and why.
                                 </p>
                                 <p>
-                                    Visual RLHF evaluation requires annotators to make structured judgment calls about image quality — not just pick a favourite, but evaluate specific dimensions such as prompt adherence, visual coherence, aesthetic quality, and safety. The consistency of these judgments directly determines the quality of the reward model signal.
+                                    Visual RLHF evaluation requires annotators to make structured judgment calls about image quality â€” not just pick a favourite, but evaluate specific dimensions such as prompt adherence, visual coherence, aesthetic quality, and safety. The consistency of these judgments directly determines the quality of the reward model signal.
                                 </p>
                                 <p>
                                     Aeterna Data approaches visual RLHF evaluation as a precision annotation task, not a subjective rating exercise. Structured rubrics define exactly what each rating dimension means. Rubric consistency is monitored across batches to detect and correct annotator drift before it affects the reward model.
@@ -156,18 +158,18 @@ export default function VisualRlhfPage() {
                                 {[
                                     {
                                         title: "Pairwise Preference Ranking",
-                                        body: "Annotators are shown two AI-generated images produced from the same prompt and select the preferred image on each evaluation dimension. The pairwise format reduces the complexity of the judgment — comparing two options is more reliable than assigning an absolute score.",
-                                        dimensions: "Prompt adherence · Visual coherence · Aesthetic quality · Safety"
+                                        body: "Annotators are shown two AI-generated images produced from the same prompt and select the preferred image on each evaluation dimension. The pairwise format reduces the complexity of the judgment â€” comparing two options is more reliable than assigning an absolute score.",
+                                        dimensions: "Prompt adherence Â· Visual coherence Â· Aesthetic quality Â· Safety"
                                     },
                                     {
                                         title: "Absolute Quality Rating",
-                                        body: "Annotators assign a score to a single image on a defined scale for each evaluation dimension. Used when pairwise comparison is not practical — for example, when the dataset is too large for all-pairs comparison or when absolute thresholds need to be established.",
-                                        dimensions: "Per-dimension 1-5 scale · Rubric-anchored · Documented examples"
+                                        body: "Annotators assign a score to a single image on a defined scale for each evaluation dimension. Used when pairwise comparison is not practical â€” for example, when the dataset is too large for all-pairs comparison or when absolute thresholds need to be established.",
+                                        dimensions: "Per-dimension 1-5 scale Â· Rubric-anchored Â· Documented examples"
                                     },
                                     {
                                         title: "Safety Classification",
-                                        body: "Annotators classify AI-generated images against defined safety categories — for example, whether an image contains harmful content, follows platform guidelines, or meets content policy requirements.",
-                                        dimensions: "Binary safe/unsafe · Multi-category policy classification · Severity rating"
+                                        body: "Annotators classify AI-generated images against defined safety categories â€” for example, whether an image contains harmful content, follows platform guidelines, or meets content policy requirements.",
+                                        dimensions: "Binary safe/unsafe Â· Multi-category policy classification Â· Severity rating"
                                     }
                                 ].map((card, idx) => (
                                     <AnimatedSection key={idx} delay={idx * 0.08}>
@@ -203,15 +205,15 @@ export default function VisualRlhfPage() {
                                     },
                                     {
                                         title: "Image Editing Models",
-                                        body: "Evaluation of AI-powered image editing — comparing edited outputs against the original and the editing instruction for accuracy and quality."
+                                        body: "Evaluation of AI-powered image editing â€” comparing edited outputs against the original and the editing instruction for accuracy and quality."
                                     },
                                     {
                                         title: "Image-to-Image Translation",
-                                        body: "Quality evaluation for style transfer, super-resolution, and domain adaptation models — comparing outputs against ground truth or reference images."
+                                        body: "Quality evaluation for style transfer, super-resolution, and domain adaptation models â€” comparing outputs against ground truth or reference images."
                                     },
                                     {
                                         title: "Content Policy Compliance",
-                                        body: "Safety classification for image generation systems — identifying outputs that violate content policies before they reach end users."
+                                        body: "Safety classification for image generation systems â€” identifying outputs that violate content policies before they reach end users."
                                     }
                                 ].map((card, idx) => (
                                     <AnimatedSection key={idx} delay={idx * 0.08} className="h-full">
@@ -248,11 +250,11 @@ export default function VisualRlhfPage() {
                                 {[
                                     {
                                         title: "Dimension Decomposition",
-                                        body: "Complex quality judgments are broken into specific, independently evaluable dimensions. 'Good image' is not a rubric dimension. 'Prompt adherence — does the image contain all the elements described in the prompt' is a rubric dimension."
+                                        body: "Complex quality judgments are broken into specific, independently evaluable dimensions. 'Good image' is not a rubric dimension. 'Prompt adherence â€” does the image contain all the elements described in the prompt' is a rubric dimension."
                                     },
                                     {
                                         title: "Scale Anchoring",
-                                        body: "Every point on the rating scale is anchored with a written definition and a visual example. Annotators do not interpret the scale — they apply it. This is the primary mechanism for reducing rubric drift across annotators and batches."
+                                        body: "Every point on the rating scale is anchored with a written definition and a visual example. Annotators do not interpret the scale â€” they apply it. This is the primary mechanism for reducing rubric drift across annotators and batches."
                                     },
                                     {
                                         title: "Drift Monitoring",
@@ -278,13 +280,13 @@ export default function VisualRlhfPage() {
                             </h2>
                             <div className="text-base leading-relaxed text-[var(--color-text-secondary)] space-y-4">
                                 <p>
-                                    Every visual RLHF evaluation batch delivered by Aeterna Data is measured for inter-annotator agreement before delivery. IAA is not a target — it is a threshold. Batches that do not meet the threshold are reworked before the client receives them.
+                                    Every visual RLHF evaluation batch delivered by Aeterna Data is measured for inter-annotator agreement before delivery. IAA is not a target â€” it is a threshold. Batches that do not meet the threshold are reworked before the client receives them.
                                 </p>
 
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
                                     <div className="bg-[rgba(74,124,255,0.06)] border border-[rgba(74,124,255,0.15)] rounded-2xl p-6 flex flex-col justify-center">
                                         <div className="text-3xl font-mono font-bold text-[var(--color-accent-cta)] mb-2" style={{ textShadow: "0 0 20px rgba(74,124,255,0.4)" }}>
-                                            κ ≥ 0.80
+                                            Îº â‰¥ 0.80
                                         </div>
                                         <h3 className="text-base font-semibold text-[var(--color-text-primary)]">Cohen&apos;s Kappa</h3>
                                         <p className="text-sm text-[var(--color-text-secondary)] mt-1">
@@ -293,7 +295,7 @@ export default function VisualRlhfPage() {
                                     </div>
                                     <div className="bg-[rgba(20,184,166,0.06)] border border-[rgba(20,184,166,0.15)] rounded-2xl p-6 flex flex-col justify-center">
                                         <div className="text-3xl font-mono font-bold mb-2" style={{ color: "#2dd4bf", textShadow: "0 0 20px rgba(45,212,191,0.4)" }}>
-                                            κ ≥ 0.75
+                                            Îº â‰¥ 0.75
                                         </div>
                                         <h3 className="text-base font-semibold text-[var(--color-text-primary)]">Fleiss&apos; Kappa</h3>
                                         <p className="text-sm text-[var(--color-text-secondary)] mt-1">
@@ -323,7 +325,7 @@ export default function VisualRlhfPage() {
                                     {
                                         num: "01",
                                         title: "Project Brief & Scoping",
-                                        body: "You share your dataset sample, object classes, and output format requirements. We scope the pilot — sample size, timeline, and deliverables — and confirm before work begins."
+                                        body: "You share your dataset sample, object classes, and output format requirements. We scope the pilot â€” sample size, timeline, and deliverables â€” and confirm before work begins."
                                     },
                                     {
                                         num: "02",
@@ -338,7 +340,7 @@ export default function VisualRlhfPage() {
                                     {
                                         num: "04",
                                         title: "Delivery & Documentation",
-                                        body: "Annotated dataset delivered in your specified format with a complete quality report — IAA scores, class distribution, and annotator notes."
+                                        body: "Annotated dataset delivered in your specified format with a complete quality report â€” IAA scores, class distribution, and annotator notes."
                                     }
                                 ].map((stage, idx) => (
                                     <AnimatedSection key={idx} delay={idx * 0.06}>
@@ -401,7 +403,7 @@ export default function VisualRlhfPage() {
                                     {
                                         badge: "Step 02",
                                         title: "Receive a Pilot Proposal",
-                                        body: "We send a scoped pilot proposal within 48 hours — sample size, timeline, flat-rate pilot fee, and deliverables."
+                                        body: "We send a scoped pilot proposal within 48 hours â€” sample size, timeline, flat-rate pilot fee, and deliverables."
                                     },
                                     {
                                         badge: "Step 03",
@@ -444,7 +446,7 @@ export default function VisualRlhfPage() {
                 </div>
             </div>
 
-            {/* ── BOTTOM CTA STRIP ── */}
+            {/* â”€â”€ BOTTOM CTA STRIP â”€â”€ */}
             <AnimatedSection>
                 <section className="py-24 border-t border-[var(--color-border)] border-b relative w-full overflow-hidden bg-[var(--color-bg-base)]">
                     <div

@@ -19,21 +19,30 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-    title: SITE_META.title,
-    description: SITE_META.description,
+    title: {
+        default: 'Image Annotation Services for AI Teams — Aeterna Data',
+        template: '%s — Aeterna Data',
+    },
+    description: 'IAA-measured image annotation for AI startups and research labs. Cohen\'s κ ≥ 0.80 guaranteed. NDA-bound, GDPR-compliant. Start with a flat-rate pilot.',
     keywords: [
-        'AI data annotation',
+        'image annotation service',
+        'data labeling company',
+        'bounding box annotation',
+        'image segmentation annotation',
+        'visual RLHF',
+        'RLHF data annotation',
+        'computer vision dataset',
         'GDPR compliant annotation',
-        'RLHF labeling',
-        'DACH AI',
-        'BYOT annotation',
-        'data labeling Germany',
+        'inter-annotator agreement',
     ],
+    robots: { index: true, follow: true },
     openGraph: {
-        title: 'Aeterna Data — Enterprise AI Data Annotation',
-        description: 'Managed, NDA-bound annotation workforce for EU AI teams.',
+        title: 'Image Annotation Services for AI Teams — Aeterna Data',
+        description: 'IAA-measured image annotation. Cohen\'s κ ≥ 0.80 guaranteed. NDA-bound, GDPR-compliant.',
         type: 'website',
-        locale: 'en_EU',
+        locale: 'en_US',
+        url: 'https://aeternadata.com',
+        siteName: 'Aeterna Data',
     },
 };
 

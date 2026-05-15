@@ -1,15 +1,17 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import Link from 'next/link';
 import { ChevronRight } from 'lucide-react';
 import AnimatedSection from '@/components/ui/AnimatedSection';
 import StickyTableOfContents from '@/components/ui/StickyTableOfContents';
 
 export const metadata: Metadata = {
-    title: 'Image Segmentation — Aeterna Data',
-    description: 'Semantic and instance segmentation annotation for computer vision datasets. Pixel-level object masking, polygon annotation, IAA measurement on every batch.',
-    robots: {
-        index: true,
-        follow: true,
+    title: 'Image Segmentation Annotation — Semantic & Instance Segmentation Service',
+    description: 'Semantic and instance segmentation annotation for computer vision datasets. IAA-measured quality with Cohen\'s κ ≥ 0.80. GDPR-compliant, NDA-bound.',
+    robots: { index: true, follow: true },
+    openGraph: {
+        title: 'Image Segmentation Annotation Service — Aeterna Data',
+        description: 'Semantic and instance segmentation with IAA-measured quality. κ ≥ 0.80 guaranteed.',
+        url: 'https://aeternadata.com/services/segmentation',
     },
 };
 
@@ -39,7 +41,7 @@ export default function SegmentationPage() {
                 `
             }} />
 
-            {/* ── PAGE HERO (FULL WIDTH) ── */}
+            {/* â”€â”€ PAGE HERO (FULL WIDTH) â”€â”€ */}
             <section className="relative min-h-[45vh] flex flex-col items-center justify-center pt-32 pb-16 text-center w-full">
                 {/* Background Orb Layer */}
                 <div
@@ -97,12 +99,12 @@ export default function SegmentationPage() {
                         </div>
                         <span className="text-[var(--color-border-subtle)] hidden sm:block">|</span>
                         <div className="flex flex-col items-center text-center">
-                            <span className="text-[var(--color-text-primary)] font-bold">Polygon · Mask</span>
+                            <span className="text-[var(--color-text-primary)] font-bold">Polygon Â· Mask</span>
                             <span className="text-[var(--color-text-muted)] text-xs uppercase tracking-widest mt-1">Method</span>
                         </div>
                         <span className="text-[var(--color-border-subtle)] hidden sm:block">|</span>
                         <div className="flex flex-col items-center text-center">
-                            <span className="text-[var(--color-text-primary)] font-bold">κ ≥ 0.80</span>
+                            <span className="text-[var(--color-text-primary)] font-bold">Îº â‰¥ 0.80</span>
                             <span className="text-[var(--color-text-muted)] text-xs uppercase tracking-widest mt-1">IAA Standard</span>
                         </div>
                         <span className="text-[var(--color-border-subtle)] hidden sm:block">|</span>
@@ -114,7 +116,7 @@ export default function SegmentationPage() {
                 </div>
             </section>
 
-            {/* ── TWO-COLUMN LAYOUT ── */}
+            {/* â”€â”€ TWO-COLUMN LAYOUT â”€â”€ */}
             <div className="max-w-7xl mx-auto px-6 lg:grid lg:grid-cols-[256px_1fr] lg:gap-16 pt-12 pb-32 w-full">
 
                 {/* LEFT SIDEBAR (Sticky TOC) */}
@@ -133,10 +135,10 @@ export default function SegmentationPage() {
                             </h2>
                             <div className="text-base leading-relaxed text-[var(--color-text-secondary)] space-y-4">
                                 <p>
-                                    Image segmentation is the task of partitioning an image into meaningful regions by assigning a label to every pixel. Unlike bounding box annotation, which draws a rectangle around an object, segmentation follows the exact boundary of the object — making it significantly more precise and significantly more demanding to annotate correctly.
+                                    Image segmentation is the task of partitioning an image into meaningful regions by assigning a label to every pixel. Unlike bounding box annotation, which draws a rectangle around an object, segmentation follows the exact boundary of the object â€” making it significantly more precise and significantly more demanding to annotate correctly.
                                 </p>
                                 <p>
-                                    Segmentation datasets are used to train models that need pixel-level understanding of a scene — medical imaging systems that must identify exact tissue boundaries, autonomous vehicle systems that must distinguish road from pavement from sidewalk at the pixel level, or robotic systems that must calculate the exact shape of an object to grasp it correctly.
+                                    Segmentation datasets are used to train models that need pixel-level understanding of a scene â€” medical imaging systems that must identify exact tissue boundaries, autonomous vehicle systems that must distinguish road from pavement from sidewalk at the pixel level, or robotic systems that must calculate the exact shape of an object to grasp it correctly.
                                 </p>
                                 <p>
                                     The quality challenge in segmentation annotation is boundary accuracy and consistency. Two annotators drawing the boundary of the same object will produce slightly different polygons. Aeterna Data measures this variation using inter-annotator agreement and enforces per-class boundary rules to keep the variation within acceptable limits.
@@ -156,10 +158,10 @@ export default function SegmentationPage() {
                                 <div className="bg-[var(--color-bg-surface)] border border-[var(--color-border)] rounded-2xl p-6">
                                     <h3 className="text-base font-semibold text-[var(--color-text-primary)]">Semantic Segmentation</h3>
                                     <p className="text-sm text-[var(--color-text-secondary)] mt-2 leading-relaxed">
-                                        Every pixel in the image is assigned a class label. All pixels belonging to the same class — for example, all road pixels, all sky pixels, all building pixels — receive the same label. Individual instances of the same class are not distinguished.
+                                        Every pixel in the image is assigned a class label. All pixels belonging to the same class â€” for example, all road pixels, all sky pixels, all building pixels â€” receive the same label. Individual instances of the same class are not distinguished.
                                     </p>
                                     <p className="text-xs text-[var(--color-text-muted)] font-mono mt-4">
-                                        Use when: Your model needs to understand what type of region each pixel belongs to — driving scenes, satellite imagery, medical tissue classification.
+                                        Use when: Your model needs to understand what type of region each pixel belongs to â€” driving scenes, satellite imagery, medical tissue classification.
                                     </p>
                                 </div>
                                 <div className="bg-[var(--color-bg-surface)] border border-[var(--color-border)] rounded-2xl p-6">
@@ -168,7 +170,7 @@ export default function SegmentationPage() {
                                         Each individual object instance receives its own unique mask, even when multiple instances of the same class appear in the image. Three cars in an image produce three separate masks, each labeled as &apos;car&apos; but individually distinguished.
                                     </p>
                                     <p className="text-xs text-[var(--color-text-muted)] font-mono mt-4">
-                                        Use when: Your model needs to count, track, or individually interact with objects — robotics, counting systems, multi-object tracking.
+                                        Use when: Your model needs to count, track, or individually interact with objects â€” robotics, counting systems, multi-object tracking.
                                     </p>
                                 </div>
                             </div>
@@ -239,11 +241,11 @@ export default function SegmentationPage() {
                                     },
                                     {
                                         title: "Per-Class Boundary Rules",
-                                        body: "Each object class in the dataset has specific boundary rules defined in the annotation guidelines — for example, whether to include the shadow of an object, whether to annotate partially occluded objects, and how to handle object boundaries that overlap. These rules are validated during the pilot phase before production begins."
+                                        body: "Each object class in the dataset has specific boundary rules defined in the annotation guidelines â€” for example, whether to include the shadow of an object, whether to annotate partially occluded objects, and how to handle object boundaries that overlap. These rules are validated during the pilot phase before production begins."
                                     },
                                     {
                                         title: "Occlusion Handling",
-                                        body: "Objects that are partially hidden behind other objects require explicit handling rules. Aeterna Data documents the occlusion policy for each class during guideline development — whether to annotate only the visible portion, or to infer and complete the full object boundary."
+                                        body: "Objects that are partially hidden behind other objects require explicit handling rules. Aeterna Data documents the occlusion policy for each class during guideline development â€” whether to annotate only the visible portion, or to infer and complete the full object boundary."
                                     }
                                 ].map((item, idx) => (
                                     <div key={idx} className="border-l-2 border-[var(--color-border)] pl-5 py-2 mb-6">
@@ -265,13 +267,13 @@ export default function SegmentationPage() {
                             </h2>
                             <div className="text-base leading-relaxed text-[var(--color-text-secondary)] space-y-4">
                                 <p>
-                                    Every segmentation annotation batch delivered by Aeterna Data is measured for inter-annotator agreement before delivery. IAA is not a target — it is a threshold. Batches that do not meet the threshold are reworked before the client receives them.
+                                    Every segmentation annotation batch delivered by Aeterna Data is measured for inter-annotator agreement before delivery. IAA is not a target â€” it is a threshold. Batches that do not meet the threshold are reworked before the client receives them.
                                 </p>
 
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
                                     <div className="bg-[rgba(74,124,255,0.06)] border border-[rgba(74,124,255,0.15)] rounded-2xl p-6 flex flex-col justify-center">
                                         <div className="text-3xl font-mono font-bold text-[var(--color-accent-cta)] mb-2" style={{ textShadow: "0 0 20px rgba(74,124,255,0.4)" }}>
-                                            κ ≥ 0.80
+                                            Îº â‰¥ 0.80
                                         </div>
                                         <h3 className="text-base font-semibold text-[var(--color-text-primary)]">Cohen&apos;s Kappa</h3>
                                         <p className="text-sm text-[var(--color-text-secondary)] mt-1">
@@ -280,7 +282,7 @@ export default function SegmentationPage() {
                                     </div>
                                     <div className="bg-[rgba(20,184,166,0.06)] border border-[rgba(20,184,166,0.15)] rounded-2xl p-6 flex flex-col justify-center">
                                         <div className="text-3xl font-mono font-bold mb-2" style={{ color: "#2dd4bf", textShadow: "0 0 20px rgba(45,212,191,0.4)" }}>
-                                            κ ≥ 0.75
+                                            Îº â‰¥ 0.75
                                         </div>
                                         <h3 className="text-base font-semibold text-[var(--color-text-primary)]">Fleiss&apos; Kappa</h3>
                                         <p className="text-sm text-[var(--color-text-secondary)] mt-1">
@@ -310,7 +312,7 @@ export default function SegmentationPage() {
                                     {
                                         num: "01",
                                         title: "Project Brief & Scoping",
-                                        body: "You share your dataset sample, object classes, and output format requirements. We scope the pilot — sample size, timeline, and deliverables — and confirm before work begins."
+                                        body: "You share your dataset sample, object classes, and output format requirements. We scope the pilot â€” sample size, timeline, and deliverables â€” and confirm before work begins."
                                     },
                                     {
                                         num: "02",
@@ -325,7 +327,7 @@ export default function SegmentationPage() {
                                     {
                                         num: "04",
                                         title: "Delivery & Documentation",
-                                        body: "Annotated dataset delivered in your specified format with a complete quality report — IAA scores, class distribution, and annotator notes."
+                                        body: "Annotated dataset delivered in your specified format with a complete quality report â€” IAA scores, class distribution, and annotator notes."
                                     }
                                 ].map((stage, idx) => (
                                     <AnimatedSection key={idx} delay={idx * 0.06}>
@@ -389,7 +391,7 @@ export default function SegmentationPage() {
                                     {
                                         badge: "Step 02",
                                         title: "Receive a Pilot Proposal",
-                                        body: "We send a scoped pilot proposal within 48 hours — sample size, timeline, flat-rate pilot fee, and deliverables."
+                                        body: "We send a scoped pilot proposal within 48 hours â€” sample size, timeline, flat-rate pilot fee, and deliverables."
                                     },
                                     {
                                         badge: "Step 03",
@@ -432,7 +434,7 @@ export default function SegmentationPage() {
                 </div>
             </div>
 
-            {/* ── BOTTOM CTA STRIP ── */}
+            {/* â”€â”€ BOTTOM CTA STRIP â”€â”€ */}
             <AnimatedSection>
                 <section className="py-24 border-t border-[var(--color-border)] border-b relative w-full overflow-hidden bg-[var(--color-bg-base)]">
                     <div
