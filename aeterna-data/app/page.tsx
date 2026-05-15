@@ -1,4 +1,5 @@
-import type { Metadata } from 'next';
+import { Metadata } from 'next';
+import Script from 'next/script';
 import Hero from '@/components/sections/Hero';
 import Services from '@/components/sections/Services';
 import Compliance from '@/components/sections/Compliance';
@@ -16,15 +17,68 @@ export const metadata: Metadata = {
     },
 };
 
+const organizationSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'Aeterna Data',
+    url: 'https://aeternadata.com',
+    logo: 'https://aeternadata.com/logo.png',
+    description: 'Specialized image annotation company providing IAA-measured annotation services for computer vision and visual RLHF teams. Cohen\'s κ ≥ 0.80 guaranteed.',
+    foundingLocation: {
+        '@type': 'Place',
+        address: {
+            '@type': 'PostalAddress',
+            addressCountry: 'ID',
+        },
+    },
+    serviceArea: {
+        '@type': 'Place',
+        name: 'Worldwide',
+    },
+    sameAs: [
+        'https://www.linkedin.com/company/aeterna-data',
+    ],
+    hasOfferCatalog: {
+        '@type': 'OfferCatalog',
+        name: 'Image Annotation Services',
+        itemListElement: [
+            { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Bounding Box Annotation', url: 'https://aeternadata.com/services/bounding-box' } },
+            { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Image Segmentation Annotation', url: 'https://aeternadata.com/services/segmentation' } },
+            { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Image Classification Annotation', url: 'https://aeternadata.com/services/classification' } },
+            { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Visual RLHF Annotation', url: 'https://aeternadata.com/services/visual-rlhf' } },
+            { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Dataset QA & Validation', url: 'https://aeternadata.com/services/dataset-qa' } },
+        ],
+    },
+};
+
+const websiteSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: 'Aeterna Data',
+    url: 'https://aeternadata.com',
+};
+
 export default function Home() {
     return (
-        <main className="min-h-screen flex flex-col relative w-full overflow-hidden">
-            <Hero />
-            <Services />
-            <Compliance />
-            <Journey />
-            <CTABanner />
-            <BookingModal />
-        </main>
+        <>
+            <Script
+                id="schema-organization"
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+            />
+            <Script
+                id="schema-website"
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+            />
+            <main className="min-h-screen flex flex-col relative w-full overflow-hidden">
+                <Hero />
+                <Services />
+                <Compliance />
+                <Journey />
+                <CTABanner />
+                <BookingModal />
+            </main>
+        </>
     );
 }

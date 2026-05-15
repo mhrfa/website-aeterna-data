@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { ChevronRight } from 'lucide-react';
 import AnimatedSection from '@/components/ui/AnimatedSection';
 import StickyTableOfContents from '@/components/ui/StickyTableOfContents';
+import Script from 'next/script';
 
 export const metadata: Metadata = {
     title: 'Image Segmentation Annotation — Semantic & Instance Segmentation Service',
@@ -26,9 +27,23 @@ const tocItems = [
     { id: 'how-to-start', label: 'How to Start' },
 ];
 
+
+const serviceSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name: 'Image Segmentation Annotation Service',
+    description: 'Semantic and instance segmentation annotation for computer vision datasets. IAA-measured quality with Cohen's κ ≥ 0.80.',
+    provider: { '@type': 'Organization', name: 'Aeterna Data', url: 'https://aeternadata.com' },
+    serviceType: 'Image Annotation',
+    url: 'https://aeternadata.com/services/segmentation',
+    areaServed: 'Worldwide',
+};
+
 export default function SegmentationPage() {
     return (
-        <main className="min-h-screen flex flex-col relative w-full overflow-hidden">
+        <>
+            <Script id="schema-service" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+            <main className="min-h-screen flex flex-col relative w-full overflow-hidden">
             <style dangerouslySetInnerHTML={{
                 __html: `
                 @keyframes orb-breathe {
@@ -468,5 +483,6 @@ export default function SegmentationPage() {
                 </section>
             </AnimatedSection>
         </main>
+        </>
     );
 }

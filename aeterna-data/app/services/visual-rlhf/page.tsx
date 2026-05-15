@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { ChevronRight } from 'lucide-react';
 import AnimatedSection from '@/components/ui/AnimatedSection';
 import StickyTableOfContents from '@/components/ui/StickyTableOfContents';
+import Script from 'next/script';
 
 export const metadata: Metadata = {
     title: 'Visual RLHF Annotation — Human Preference Data for Reward Model Training',
@@ -26,9 +27,23 @@ const tocItems = [
     { id: 'how-to-start', label: 'How to Start' },
 ];
 
+
+const serviceSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name: 'Visual RLHF Annotation Service',
+    description: 'Human preference annotation for visual RLHF and reward model training. IAA-measured quality with Cohen's κ ≥ 0.80.',
+    provider: { '@type': 'Organization', name: 'Aeterna Data', url: 'https://aeternadata.com' },
+    serviceType: 'Image Annotation',
+    url: 'https://aeternadata.com/services/visual-rlhf',
+    areaServed: 'Worldwide',
+};
+
 export default function VisualRlhfPage() {
     return (
-        <main className="min-h-screen flex flex-col relative w-full overflow-hidden">
+        <>
+            <Script id="schema-service" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+            <main className="min-h-screen flex flex-col relative w-full overflow-hidden">
             <style dangerouslySetInnerHTML={{
                 __html: `
                 @keyframes orb-breathe {
@@ -480,5 +495,6 @@ export default function VisualRlhfPage() {
                 </section>
             </AnimatedSection>
         </main>
+        </>
     );
 }
