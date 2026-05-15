@@ -3,7 +3,6 @@ import Link from 'next/link';
 import { ChevronRight } from 'lucide-react';
 import AnimatedSection from '@/components/ui/AnimatedSection';
 import StickyTableOfContents from '@/components/ui/StickyTableOfContents';
-import Script from 'next/script';
 
 export const metadata: Metadata = {
     title: 'Bounding Box Annotation Service for Object Detection Datasets',
@@ -42,7 +41,7 @@ const serviceSchema = {
 export default function BoundingBoxPage() {
     return (
         <>
-            <Script id="schema-service" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
             <main className="min-h-screen flex flex-col relative w-full overflow-hidden">
             <style dangerouslySetInnerHTML={{
                 __html: `

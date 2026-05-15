@@ -1,5 +1,4 @@
 import { Metadata } from 'next';
-import Script from 'next/script';
 import Hero from '@/components/sections/Hero';
 import Services from '@/components/sections/Services';
 import Compliance from '@/components/sections/Compliance';
@@ -17,27 +16,15 @@ export const metadata: Metadata = {
     },
 };
 
-const organizationSchema = {
+const organizationSchema = JSON.stringify({
     '@context': 'https://schema.org',
     '@type': 'Organization',
     name: 'Aeterna Data',
     url: 'https://aeternadata.com',
     logo: 'https://aeternadata.com/logo.png',
     description: 'Specialized image annotation company providing IAA-measured annotation services for computer vision and visual RLHF teams. Cohen\'s κ ≥ 0.80 guaranteed.',
-    foundingLocation: {
-        '@type': 'Place',
-        address: {
-            '@type': 'PostalAddress',
-            addressCountry: 'ID',
-        },
-    },
-    serviceArea: {
-        '@type': 'Place',
-        name: 'Worldwide',
-    },
-    sameAs: [
-        'https://www.linkedin.com/company/aeterna-data',
-    ],
+    serviceArea: { '@type': 'Place', name: 'Worldwide' },
+    sameAs: ['https://www.linkedin.com/company/aeterna-data'],
     hasOfferCatalog: {
         '@type': 'OfferCatalog',
         name: 'Image Annotation Services',
@@ -49,27 +36,25 @@ const organizationSchema = {
             { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Dataset QA & Validation', url: 'https://aeternadata.com/services/dataset-qa' } },
         ],
     },
-};
+});
 
-const websiteSchema = {
+const websiteSchema = JSON.stringify({
     '@context': 'https://schema.org',
     '@type': 'WebSite',
     name: 'Aeterna Data',
     url: 'https://aeternadata.com',
-};
+});
 
 export default function Home() {
     return (
         <>
-            <Script
-                id="schema-organization"
+            <script
                 type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+                dangerouslySetInnerHTML={{ __html: organizationSchema }}
             />
-            <Script
-                id="schema-website"
+            <script
                 type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+                dangerouslySetInnerHTML={{ __html: websiteSchema }}
             />
             <main className="min-h-screen flex flex-col relative w-full overflow-hidden">
                 <Hero />
